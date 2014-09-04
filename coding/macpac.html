@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ian D. McCunn">    
+    <meta name="description" content="Portfolio of new music composer and guitarist Ian D. McCunn. Services for guitar instruction and music composition including scoring, music notation, arranging, and original music.">
+    <meta name="keywords" content="music composition, composition, ian  mccunn, 8 string guitar, orchestral music, new music, atonal, atonal music, tools for composers, guitar, guitar lessons, guitar instruction, classical guitar">
+    <meta name="robots" content="noindex">
+
+    <link rel="shortcut icon" href="../sine.ico">
+
+    <title>Ian D. McCunn - Composer and Guitarist</title>
+
+    
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <style type="text/css">
+      label{
+        display: inline-block;
+        float: left;
+        clear: left;
+        width: 175px;
+        text-align: right;
+        margin-right: 8px;
+      }
+
+      #setSize {
+        margin-top: 0px;
+      }
+      #nPerms {
+        margin-top: 5px;
+      }
+
+      .descCont{
+        border: 1px solid #000; 
+        padding: 15px; 
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .patGenBox {
+        margin: auto;
+        width: 70%;
+      }
+
+      #result{
+        font-size: 26px; 
+        display: block; 
+        color: #3B3B3B; 
+        background-color: #fff;
+      }
+
+      .lilPad{
+        padding: 10px;
+      }
+
+      .program{
+        margin: auto; 
+        width: 600px; 
+        border: 2px solid #000; 
+        margin-top: 10px; 
+        overflow: hidden; 
+        background-color: #fff;
+
+      }
+    </style>
+
+  </head>
+
+  <body data-type="background" data-speed="2">
+
+    <!--TOP NAVIGATION BAR_______________________________________________-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navTextPos">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul id="nav" class="nav-brand">
+            <li><a class="navbar-brand hovtr" href="../index.html">Ian D. McCunn</a></li>
+          </ul>
+          
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+
+            <!-- Composer Menu -->
+            <li> 
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
+                  Composer <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="nav" role="menu">
+                  <li><a href="../index.html">Listen</a></li>
+                  <li><a href="../catalogue.html">Compositions</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Guitarist Menu -->
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
+                  Guitarist <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="nav" role="menu">
+                  <!--<li><a href="guitarist.html">Audiovisual</a></li>-->
+                  <li><a href="../lessons.html">Guitar Lessons</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
+                  Dev <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="nav" role="menu">
+                  <li><a href="../coding.html">Web</a></li>
+                  <li><a href="../dsp_projects.html">DSP</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!--
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
+                  Resources<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="nav" role="menu">
+                  <li><a href="externalresources">External Online Resources</a></li>
+                  <li><a href="colleagues">Colleagues</a></li>
+                </ul>
+              </div>
+            </li>
+            -->
+          
+            <!-- Info Menu -->
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
+                  Info <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="nav" role="menu">
+
+                  <li><a href="about.html">Bio</a></li>
+                  <li><a href="vita.html">CV</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--END TOP NAVIGATION BAR___________________________________________-->
+
+
+
+    <!-- MAIN, PAGE CONTENT______________________________________________-->
+    <div class="container" id="maincontent">
+  		<div class="row">
+  		  <div class="row-fluid patGenBox w70">
+
+          <h3>Right-Hand Picking Pattern Generator</h3>
+  				<div class="descCont">
+            <img src="../img/Hybrid_picking.jpg" style="float: right; margin: 5px;">
+            <p>This tool is meant to create a random arrangement of right-hand picking attacks for guitar exercise.</p>
+    	    <br>
+            <p><b><i>Directions: </i></b></p>
+            <p>Select the type of picking (fingerstyle or hybrid picking). Enter the number of attacks per pattern and number of patterns, then click 'Generate'.</p>
+          </div>
+
+
+          <!--********* Program Container*****************************-->
+          <div class="program">
+
+            <!--******** Program Input *********************************-->
+            <div style="border: 0px solid #000; margin: 10px;">
+              <h4><i>Input</i></h4>
+      				<form>
+
+                <label>Hybrid Picking</label><input id="hybridStyle" name="pickingStyle" type="radio" checked> <br>
+                <label>Fingerstyle</label><input id="fingerStyle" name="pickingStyle" type="radio"><br>
+
+                <label>Exclude pinky</label><input id="noPinky" name="noPinkyBox" type="checkbox"> <br>
+
+      					<label>Size of Pattern</label>
+      					<input id="setSize" type="text" width="50px;" value="12"/><small><i>(limited to a size of 20)</i></small><br>
+      					<label>Number of Patterns</label>
+      					<input id="nPerms" type="text" width="50px;" value="4"/><small><i>(limited to 500 sets)</i></small><br><br>
+      					<input id="initCalc" type="button" value="Generate" style="margin: auto;" />
+
+
+      				</form>
+            </div>
+
+            <!--******** Program Output *********************************-->
+    				<div class="lilPad">
+              <hr>
+              <h4><i>Output</i></h4>
+    					<h5>Picking Attack Patterns:</h5>
+    					<p id="result">
+
+    					</p>
+
+              <div id="attackStats">
+                <h5><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Attack Distributions:</a></h5>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <ul>
+                    <li>Frequency of <span class="attTypes">p&nbsp;</span>: <span id="fpick" class="distributions">0.00</span>%</li>
+                    <li>Frequency of <span class="attTypes">i&nbsp;</span>: <span id="find" class="distributions">0.00</span>%</li>
+                    <li>Frequency of <span class="attTypes">m&nbsp;</span>: <span id="fmid" class="distributions">0.00</span>%</li>
+                    <li>Frequency of <span class="attTypes">a&nbsp;</span>: <span id="fanu" class="distributions">0.00</span>%</li>
+                    <li>Frequency of <span class="attTypes">c&nbsp;</span>: <span id="fpinky" class="distributions">0.00</span>%</li>
+                  </ul>
+                </div>
+              </div>
+    				</div>
+
+          </div>
+
+  			</div>
+  		</div>
+    </div>
+    <!--END MAIN PAGE CONTENT____________________________________________-->
+
+
+    <!-- FOOTER _________________________________________________________-->
+      <hr>
+      <div class="panel-footer text-center ">
+        
+        <div class="w70">
+          <!--SITEMAP-->
+          <div class="sitemap">
+
+            <div class="sitemapSection">
+              <ul>Composer
+                <li><a href="index.html">Listen</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <!--<li><a href="projects.html">Projects</a></li>-->
+              </ul>
+            </div>
+            <div class="sitemapSection">
+              <ul>Guitarist
+                <li><a href="guitarist.html">Audiovisual</a></li>
+                <li><a href="instruction.html">Instruction</a></li>
+              </ul>
+            </div>
+            <div class="sitemapSection">
+              <ul>Dev
+                <li><a href="coding.html">Web</a></li>
+                <li><a href="dsp_projects.html">DSP</a></li>
+              </ul>
+            </div>
+            <div class="sitemapSection">
+              <ul>Info
+                <li><a href="about.html">Biography</a></li>
+                <li><a href="vita.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          
+          </div>
+          <!--END SITEMAP-->
+
+          <!--SOCIAL-->
+          <div class="digitalPresence">
+            <ul>
+              <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank"><img src="../img/lin.png"></a></li>
+              <li><a href="http://www.soundcloud.com/iandmccunn" target="_blank"><img src="../img/sc.png"></a></li>
+              <li><a href="http://www.github.com/mcfun" target="_blank"><img src="../img/GitHub-Mark-32px.png"></a></li>
+              <li><a href="http://www.codepen.io/mcfun" target="_blank"><img src="../img/codePenProfile.png"></a></li>
+              <li><a href="http://www.youtube.com/ianmccunn" target="_blank"><img src="../img/yt.png"></a></li>
+              <li><a href="https://twitter.com/ianmccunn" target="_blank"><img src="../img/twit.png"></a></li>
+            </ul>
+          </div>
+        
+        </div>
+
+        <small class="text-center siteStatusCopy">© 2013 McCunn Music. All rights reserved. <span>Created by <a href="">Monad.Dyad:</a></span></small> 
+
+      </div>
+    <!--END FOOTER_______________________________________________________-->
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../js/general.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/macpac.js"></script>
+    
+  </body>
+
+</html>
+
+
+
+
+

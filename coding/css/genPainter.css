@@ -1,0 +1,15 @@
+canvas { 
+
+}
+
+.canvasCont{
+  width: 500px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.genPaintButton{
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
