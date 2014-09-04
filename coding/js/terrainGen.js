@@ -151,15 +151,15 @@
 	}
 
 
-	// function drawLinearInterpolation(vals, color) {
-	// 	ctx.strokeStyle = color;
-	// 	ctx.beginPath();
-	// 	ctx.moveTo(ORIGIN.xx, ORIGIN.yy - (Y_PX/2));
-	// 	for (i = 0; i < vals.length; i++) {
-	// 		ctx.lineTo(drawnXVals[i], drawnYVals[i]);
-	// 	}
-	// 	ctx.stroke();
-	// }
+	function drawLinearInterpolation(vals, color) {
+		ctx.strokeStyle = color;
+		ctx.beginPath();
+		ctx.moveTo(ORIGIN.xx, ORIGIN.yy - (Y_PX/2));
+		for (i = 0; i < vals.length; i++) {
+			ctx.lineTo(drawnXVals[i], drawnYVals[i]);
+		}
+		ctx.stroke();
+	}
 
 	function Linear_Interpolate(a, b, x) {
 		return  a * (1 - x) + b * x;
@@ -413,4 +413,4 @@
 	frameLoop();
 	
 
-}());
+})();
