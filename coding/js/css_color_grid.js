@@ -3,21 +3,16 @@
 (function(){
 	"use strict";
 	
-	// ******************
-	// Constants
 	var hasRun = false;
-
 
 	var animSheet = document.createElement('style');
 	animSheet.setAttribute('id', 'bodyAnimSheet');
 	animSheet.innerHTML = ' ';
+	
 	// Add stylesheet for webkit animation definitions
 	document.body.appendChild(animSheet);
 	
-
 	document.onload = updateDOM();
-
-
 
 	var config1 = new Preset();
 	config1.blockSize = 20;
