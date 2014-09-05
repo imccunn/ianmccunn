@@ -21,13 +21,21 @@
     <title>Ian D. McCunn - Canvas Project 3</title>
 
     <style type="text/css">
+
       #newSeed {
+        display: block;
         height: 25px; 
-        margin-bottom: 5px;
+        margin: 0;
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        color: #000;
       }
+
       .codepenlnk {
         width: 100px;
       }
+
       .cplnk {
         position: relative;
         display: block;
@@ -35,6 +43,7 @@
         padding: 20px 0 20px 0;
         text-align: center;
       }
+
     </style>
   </head>
 
@@ -138,7 +147,10 @@
     <div class="container" id="maincontent">
 
       <div style="width: 1024px; margin: auto;">
-        <button id="newSeed">Generate New Polygon Group</button>
+      <div>
+        <a href='#' id="newSeed">Generate New Polygon Group</a>
+        </div>
+
         <canvas id='c'></canvas>
         <script src="js/canvas3.js"></script>
       </div>

@@ -57,43 +57,43 @@
   }
 
   #canvas1 {
-    background-image: url('coding/img/canvas1samp.png');
+    background-image: url('../img/canvas1samp.png');
     background-repeat: no-repeat;
     background-size: 300px;
   }
 
   #canvas2 {
-    background-image: url('coding/img/canvas2samp.png');
+    background-image: url('../img/canvas2samp.png');
     background-repeat: no-repeat;
     background-size: 300px;
   }
 
   #canvas3 {
-    background-image: url('coding/img/canvas3samp.png');
+    background-image: url('../img/canvas3samp.png');
     background-repeat: no-repeat;
     background-size: 300px;
   }
 
   #cssAnims1 {
-    background-image: url('coding/img/cssAnim1Samp.png');
+    background-image: url('../img/cssAnim1Samp.png');
     background-repeat: no-repeat;
     background-size: 350px;
   }
 
   #canvas5 {
-    background-image: url('coding/img/canvas5samp.png');
+    background-image: url('../img/canvas5samp.png');
     background-repeat: no-repeat;
     background-size: 350px;
   }
 
   .musicCodeProj {
-    background-image: url('coding/img/musicCodeProj.png');
+    background-image: url('../img/musicCodeProj.png');
     background-repeat: no-repeat;
     background-size: 350px;
   }
 
   .guitarCodeProj {
-    background-image: url('coding/img/guitarCodeProj.png');
+    background-image: url('../img/guitarCodeProj.png');
     background-repeat: no-repeat;
     background-size: 350px;
   }
