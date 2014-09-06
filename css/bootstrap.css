@@ -5,7 +5,9 @@
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Designed and built with all the love in the world by @mdo and @fat. With modifications by Ian D. McCunn.
+ * Designed and built with all the love in the world by @mdo and @fat.
+ *
+ * With modifications by Ian D. McCunn.
 
  */
 
@@ -48,8 +50,6 @@
 .technicalList li::after {
   content: ' /';
 }
-
-
 
 .contactText p {
   font-size: 1.1em;
