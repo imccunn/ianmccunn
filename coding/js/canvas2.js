@@ -10,7 +10,7 @@
 	c.height = height;
 
 	// Number of 'rain' pixels on canvas at any given time
-	var numDots = 10000,
+	var numDots = 3000,
 			dots = [];
 
 	//init dots storage
