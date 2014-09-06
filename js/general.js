@@ -29,20 +29,21 @@ $(document).ready(function(){
     });
   });
 
+});
+
 
 //handle workslist clicks with ajax
 /*$(document).on('click', '#complink li a', function(){
+  	var compdata = $(this).attr('href');
+  	compdata = '../' + compdata + '.html';
 
-	var compdata = $(this).attr('href');
-	compdata = '../' + compdata + '.html';
+  	//$(#workdetails).load(compdata);
+  	$.get(compdata, function(data){
+  		$("div#workdetails")
+  			.hide()
+  			.html(data)
+  			.fadeIn(750);
+  	});
 
-	//$(#workdetails).load(compdata);
-	$.get(compdata, function(data){
-		$("div#workdetails")
-			.hide()
-			.html(data)
-			.fadeIn(750);
-	});
-
-	return false;
-});*/
+  	return false;
+  });*/
