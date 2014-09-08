@@ -15,8 +15,6 @@
 
 /*Added by Mr. McCunn--------------------------------------*/
 
-@import url('http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300');
-
 
 /*CV********/
 
@@ -28,6 +26,7 @@
   margin-top: 30px;
   background-color: #C4C4C4;
 }
+
 .cvSection div div:nth-child(1) {
   width: 250px;
 }
@@ -533,7 +532,6 @@ div.w70{
     margin: 0;
     padding: 10px;
   }
-
 
 }
 
