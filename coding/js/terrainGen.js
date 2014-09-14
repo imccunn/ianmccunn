@@ -8,7 +8,6 @@
 		BORDER_WIDTH = 50,
 		c = document.getElementById('c'),
 		ctx = c.getContext('2d'),
-		i,
 		SAMPLE_RATE = 4096; //4096/8192
 
 	c.width = WIDTH;
@@ -49,7 +48,7 @@
 	function Graph() {
 		this.drawnYVals = [];
 		this.drawnXVals = [];
-		this.ORIGIN = new Coord(100, 560);
+		this.ORIGIN = new Coord(100, 640);
 		this.X_PX = 800;
 		this.Y_PX = 500;
 	}
@@ -60,14 +59,14 @@
 		
 			var xPointDist = this.X_PX/SAMPLE_RATE;
 			
-			for ( i = 0; i < noiseObj.length; i++ ) {
+			for (var i = 0; i < noiseObj.length; i++ ) {
 				this.drawnYVals[i] = roundFloat(this.ORIGIN.yy - ( parseFloat(noiseObj[i]) + 1) * (this.Y_PX) / 2, 4);
 				this.drawnXVals[i] = xPointDist * i;
 			}
 		},
 
 		drawGraphScaledPoints : function(noiseObj, color) {
-			for ( i = 0; i < noiseObj.length; i++ ) {
+			for (var i = 0; i < noiseObj.length; i++ ) {
 				drawPoint( this.drawnXVals[i] + this.ORIGIN.xx, this.drawnYVals[i], color );
 			}
 		},
@@ -102,7 +101,7 @@
 		},
 
 		drawGraphLines : function(setofpoints) {
-			for (i = 0; i < setofpoints.points.length; i++){
+			for (var i = 0; i < setofpoints.points.length; i++){
 				drawRect(setofpoints.points[i].xx, setofpoints.points[i].yy, 1, HEIGHT-setofpoints.points[i].yy);
 			}
 		},
@@ -112,7 +111,7 @@
 			ctx.strokeStyle = 'rgba(0, 0, 256, 0.5)';
 			ctx.beginPath();
 			
-			for( i = 0; i < 10; i ++) {
+			for(var i = 0; i < 10; i ++) {
 				
 				ctx.moveTo(this.X_PX/2+this.ORIGIN.xx, this.ORIGIN.yy-this.Y_PX/2);
 				ctx.lineTo(this.ORIGIN.xx+(lineWidth*i), this.ORIGIN.yy);
@@ -155,7 +154,7 @@
 		ctx.strokeStyle = color;
 		ctx.beginPath();
 		ctx.moveTo(ORIGIN.xx, ORIGIN.yy - (Y_PX/2));
-		for (i = 0; i < vals.length; i++) {
+		for (var i = 0; i < vals.length; i++) {
 			ctx.lineTo(drawnXVals[i], drawnYVals[i]);
 		}
 		ctx.stroke();
@@ -391,9 +390,6 @@
 
 	perlin1G.setGraphScaledPoints(perlin1.summation);
 
-	document.getElementById('clearTimeO').addEventListener('click', function() {
-		clearTimeout(fLoop);
-	});
 
 	document.getElementById('smooth').addEventListener('click', function() {
 		var factor = document.getElementById('smoothFactor').value;

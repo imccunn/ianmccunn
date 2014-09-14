@@ -19,46 +19,48 @@
     <title>IDM - 1D Perlin Noise Generator</title>
     <style type="text/css">
       .controlPanel {
-          padding: 20px;
-          padding-left: 60px;
-          color: #00FF00;
-          background-color: #000;
+        display: inline-block;
+        padding: 20px;
+        padding-left: 60px;
+        color: #00FF00;
+        background-color: #000;
 
-          border: 0px solid #fff;
-          top: -200px;
-          position: relative;
-        }
+        border: 0px solid #fff;
+        top: -770px;
+        left: 400px;
+        position: relative;
+      }
 
-        .controlPanel > input {
-          display: inline-block;
-        }
+      .controlPanel > input {
+        display: inline-block;
+      }
 
-        .octaveSelect {
-          display: inline;
-        }
+      .octaveSelect {
+        display: inline;
+      }
 
-        .octaveSelect input {
-          display: inline-block;
-        }
+      .octaveSelect input {
+        display: inline-block;
+      }
 
-        #c {
+      #c {
 
-          z-index: -1;
-        }
+        z-index: -1;
+      }
 
-        .textButton {
-          display: inline-block;
-          margin: 2px;
-          border: 1px solid #00FF00;
-          color: #00FF00;
-          background-color: #000;
-        }
+      .textButton {
+        display: inline-block;
+        margin: 2px;
+        border: 1px solid #00FF00;
+        color: #00FF00;
+        background-color: #000;
+      }
 
-        .textButton a {
-          padding: 5px;
-          color: #00FF00;
+      .textButton a {
+        padding: 5px;
+        color: #00FF00;
 
-        }
+      }
 
     </style>
         
@@ -204,7 +206,6 @@
           Persistence: <input type='text' id='persist' value='4' size='2'><br>
           <div class='textButton'><a href='#' id='setAmpFreq'>Set Noise From Values</a> </div>
           <div class='textButton'><a href='#' id='smooth'>Smooth</a></div> <input type='text' id='smoothFactor' value='50' size='4'><br>
-          <div class='textButton'><a href='#' id='clearTimeO'>Stop Animation</a></div>
         </div>
         <script src='js/terrainGen.js'></script>
       </div>
