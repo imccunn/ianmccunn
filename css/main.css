@@ -4,22 +4,26 @@
 */
 
 @font-face {
-  font-family: 'opensans';
-  src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+  font-family: 'alegreya';
+  src: url('../fonts/AlegreyaSansSC/AlegreyaSansSC-Regular.ttf');
 }
+
+@font-face {
+	font-family: 'opensans';
+	src: url('../fonts/open-sans/OpenSans-Light.ttf');
+}
+
 body {
 	background-color: #333333;
 	color: #fff;
 	margin: 0;
-	font-family: 'opensans';
+	font-family: 'opensans', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
 }
-
 
 a {
 	color: #249100;
 	text-decoration: none;
 }
-
 
 ::selection {
 	background-color: #249100;
@@ -158,8 +162,10 @@ a {
 	border: 1px solid #fff;
 }*/
 
+
 .index-content p {
 	text-indent: 29.5px;
+	letter-spacing: 1px;
 }
 .index-content h3 {
 	
