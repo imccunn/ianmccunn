@@ -65,6 +65,28 @@
 			}
 		},
 
+		checkGSP : function() {
+			var highBound = 0, lowBound = 0;
+			for (var i = 0; i < this.drawnXVals.length; i++){
+
+				if (this.drawnYVals[i] > this.Y_PX){
+					console.log("bound hit");
+					if (this.drawnYVals[i] > highBound) {
+						highBound = this.drawnYVals[i];
+					}
+				}
+
+				if (this.drawnYVals[i] < 0){
+					if (this.drawnYVals[i] < lowBound) {
+						lowBound = this.drawnYVals[i];
+					}
+				}
+
+			}
+
+			console.log("low: " + lowBound + ", high: " + highBound);
+		},
+
 		drawGraphScaledPoints : function(noiseObj, color) {
 			for (var i = 0; i < noiseObj.length; i++ ) {
 				drawPoint( this.drawnXVals[i] + this.ORIGIN.xx, this.drawnYVals[i], color );
@@ -340,37 +362,34 @@
 		perlin1G.drawSquareGrid();
 
 		//somenoiseG.drawGraphScaledPoints(somenoise.cosIntCoords, '#00FF00');
-
-
 		perlin1G.drawGraphScaledPoints(perlin1.summation, '#00ff00');
 
-		// fLoop = setTimeout(frameLoop, 1000 / 60);
 		//requestAnimationFrame(frameLoop);
-
 	}
 
-	
 
 	var ampNume = 4,
 		frequency = 32;
 
 	var octaveDom = 10,
-		persistDom = 4;
+		persistDom = 1;
+		
 	var somenoise = new Noise();
 	var somenoiseG = new Graph();
 
-	var perlin1 = new Perlin_Noise(8, 4);
+	var perlin1 = new Perlin_Noise(octaveDom, persistDom);
 	var perlin1G = new Graph();
-
-	
 
 	somenoise.initAndInterp(ampNume, frequency);
 	somenoiseG.setGraphScaledPoints(somenoise.cosIntCoords);
 
-	perlin1.init(10, 4);
+
+	perlin1.init(octaveDom, persistDom);
 	perlin1.sum(1, 2, 3, 5, 6, 7, 8, 9, 10);
 
+
 	perlin1G.setGraphScaledPoints(perlin1.summation);
+	perlin1G.checkGSP();
 
 
 	document.getElementById('smooth').addEventListener('click', function() {
@@ -386,6 +405,7 @@
 		perlin1.init(octaveDom, persistDom);
 		perlin1.sum(1, 2, 3, 5, 6, 7, 8, 9, 10);
 		perlin1G.setGraphScaledPoints(perlin1.summation);
+		perlin1G.checkGSP();
 		frameLoop();
 	});
 	frameLoop();
