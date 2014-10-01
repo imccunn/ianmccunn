@@ -70,18 +70,25 @@
 			for (var i = 0; i < this.drawnXVals.length; i++){
 
 				if (this.drawnYVals[i] > this.Y_PX){
-					console.log("bound hit");
+					
 					if (this.drawnYVals[i] > highBound) {
 						highBound = this.drawnYVals[i];
-					}
+					} 
 				}
 
 				if (this.drawnYVals[i] < 0){
+
 					if (this.drawnYVals[i] < lowBound) {
 						lowBound = this.drawnYVals[i];
 					}
 				}
 
+			}
+
+			if (highBound > 0 || lowBound < 0) {
+				for (var i = 0; i < this.drawnXVals.length; i++) {
+					
+				}
 			}
 
 			console.log("low: " + lowBound + ", high: " + highBound);
@@ -373,7 +380,7 @@
 
 	var octaveDom = 10,
 		persistDom = 1;
-		
+
 	var somenoise = new Noise();
 	var somenoiseG = new Graph();
 
