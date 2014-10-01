@@ -87,70 +87,61 @@
       </div>
 
     <!-- MAIN, PAGE CONTENT______________________________________________-->
-    <div class="container" id="maincontent">
-  		<div class="row">
-  		  <div class="row-fluid patGenBox w70">
+    <div class="main-content">
 
-          <h3>Right-Hand Picking Pattern Generator</h3>
-  				<div class="descCont">
-            <img src="img/Hybrid_picking.jpg" style="float: right; margin: 5px;">
-            <p>This tool is meant to create a random arrangement of right-hand picking attacks for guitar exercise.</p>
-    	    <br>
-            <p><b><i>Directions: </i></b></p>
-            <p>Select the type of picking (fingerstyle or hybrid picking). Enter the number of attacks per pattern and number of patterns, then click 'Generate'.</p>
+      <h3>Right-Hand Picking Pattern Generator</h3>
+      <p>This tool is meant to create a random arrangement of right-hand picking attacks for guitar exercise.</p>
+
+      <p><b><i>Directions: </i></b></p>
+      <p>Select the type of picking (fingerstyle or hybrid picking). Enter the number of attacks per pattern and number of patterns, then click 'Generate'.</p>
+
+      <!--********* Program Container*****************************-->
+      <div class="program">
+
+        <!--******** Program Input *********************************-->
+        <div style="border: 0px solid #000; margin: 10px;">
+          <h4><i>Input</i></h4>
+  				<form>
+
+            <label>Hybrid Picking</label><input id="hybridStyle" name="pickingStyle" type="radio" checked> <br>
+            <label>Fingerstyle</label><input id="fingerStyle" name="pickingStyle" type="radio"><br>
+
+            <label>Exclude pinky</label><input id="noPinky" name="noPinkyBox" type="checkbox"> <br>
+
+  					<label>Size of Pattern</label>
+  					<input id="setSize" type="text" width="50px;" value="12"/><small><i>(limited to a size of 20)</i></small><br>
+  					<label>Number of Patterns</label>
+  					<input id="nPerms" type="text" width="50px;" value="4"/><small><i>(limited to 500 sets)</i></small><br><br>
+  					<input id="initCalc" type="button" value="Generate" style="margin: auto;" />
+
+
+  				</form>
+        </div>
+      </div>
+
+      <!--******** Program Output *********************************-->
+			<div class="lilPad">
+        <hr>
+        <h4><i>Output</i></h4>
+				<h5>Picking Attack Patterns:</h5>
+				<p id="result">
+
+				</p>
+
+        <div id="attackStats">
+          <h5><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Attack Distributions:</a></h5>
+          <div id="collapse1" class="panel-collapse collapse">
+            <ul>
+              <li>Frequency of <span class="attTypes">p&nbsp;</span>: <span id="fpick" class="distributions">0.00</span>%</li>
+              <li>Frequency of <span class="attTypes">i&nbsp;</span>: <span id="find" class="distributions">0.00</span>%</li>
+              <li>Frequency of <span class="attTypes">m&nbsp;</span>: <span id="fmid" class="distributions">0.00</span>%</li>
+              <li>Frequency of <span class="attTypes">a&nbsp;</span>: <span id="fanu" class="distributions">0.00</span>%</li>
+              <li>Frequency of <span class="attTypes">c&nbsp;</span>: <span id="fpinky" class="distributions">0.00</span>%</li>
+            </ul>
           </div>
+        </div>
+			</div>
 
-
-          <!--********* Program Container*****************************-->
-          <div class="program">
-
-            <!--******** Program Input *********************************-->
-            <div style="border: 0px solid #000; margin: 10px;">
-              <h4><i>Input</i></h4>
-      				<form>
-
-                <label>Hybrid Picking</label><input id="hybridStyle" name="pickingStyle" type="radio" checked> <br>
-                <label>Fingerstyle</label><input id="fingerStyle" name="pickingStyle" type="radio"><br>
-
-                <label>Exclude pinky</label><input id="noPinky" name="noPinkyBox" type="checkbox"> <br>
-
-      					<label>Size of Pattern</label>
-      					<input id="setSize" type="text" width="50px;" value="12"/><small><i>(limited to a size of 20)</i></small><br>
-      					<label>Number of Patterns</label>
-      					<input id="nPerms" type="text" width="50px;" value="4"/><small><i>(limited to 500 sets)</i></small><br><br>
-      					<input id="initCalc" type="button" value="Generate" style="margin: auto;" />
-
-
-      				</form>
-            </div>
-
-            <!--******** Program Output *********************************-->
-    				<div class="lilPad">
-              <hr>
-              <h4><i>Output</i></h4>
-    					<h5>Picking Attack Patterns:</h5>
-    					<p id="result">
-
-    					</p>
-
-              <div id="attackStats">
-                <h5><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Attack Distributions:</a></h5>
-                <div id="collapse1" class="panel-collapse collapse">
-                  <ul>
-                    <li>Frequency of <span class="attTypes">p&nbsp;</span>: <span id="fpick" class="distributions">0.00</span>%</li>
-                    <li>Frequency of <span class="attTypes">i&nbsp;</span>: <span id="find" class="distributions">0.00</span>%</li>
-                    <li>Frequency of <span class="attTypes">m&nbsp;</span>: <span id="fmid" class="distributions">0.00</span>%</li>
-                    <li>Frequency of <span class="attTypes">a&nbsp;</span>: <span id="fanu" class="distributions">0.00</span>%</li>
-                    <li>Frequency of <span class="attTypes">c&nbsp;</span>: <span id="fpinky" class="distributions">0.00</span>%</li>
-                  </ul>
-                </div>
-              </div>
-    				</div>
-
-          </div>
-
-  			</div>
-  		</div>
     </div>
     <!--END MAIN PAGE CONTENT____________________________________________-->
       <div class="footer">
@@ -165,7 +156,7 @@
         </div>
 
         <div class='copyright'>
-          <p>Code and Design by Ian D. McCunn © 2014</p>
+          <p>Ian D. McCunn © 2014</p>
         </div>
       </div>
 
@@ -177,6 +168,13 @@
     <script src="js/macpac.js"></script>
     <!-- Analytics -->
     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55319861-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
 
