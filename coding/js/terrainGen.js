@@ -3,8 +3,8 @@
 	'use strict';
 
 	// Canvas Size
-	var WIDTH = 1024,
-		HEIGHT = 768,
+	var WIDTH = 860,
+		HEIGHT = 550,
 		BORDER_WIDTH = 50,
 		c = document.getElementById('c'),
 		ctx = c.getContext('2d'),
@@ -48,7 +48,7 @@
 	function Graph() {
 		this.drawnYVals = [];
 		this.drawnXVals = [];
-		this.ORIGIN = new Coord(100, 640);
+		this.ORIGIN = new Coord(35, 520);
 		this.X_PX = 800;
 		this.Y_PX = 500;
 	}
@@ -106,22 +106,6 @@
 			}
 		},
 
-		drawFutureGridz : function() {
-			var lineWidth = 88;
-			ctx.strokeStyle = 'rgba(0, 0, 256, 0.5)';
-			ctx.beginPath();
-			
-			for(var i = 0; i < 10; i ++) {
-				
-				ctx.moveTo(this.X_PX/2+this.ORIGIN.xx, this.ORIGIN.yy-this.Y_PX/2);
-				ctx.lineTo(this.ORIGIN.xx+(lineWidth*i), this.ORIGIN.yy);
-				ctx.lineWidth = 1;
-				ctx.stroke();
-				ctx.closePath();
-				
-			}
-			
-		},
 		drawSquareGrid : function() {
 			ctx.strokeStyle = 'rgb(0, 0, 80)';
 
@@ -324,7 +308,6 @@
 			}
 		}
 
-
 	};
 
 
@@ -353,9 +336,8 @@
 		clear();
 
 		perlin1G.drawAxis();
-		//perlin1G.drawFutureGridz();
+		//perlin1G.draw();
 		perlin1G.drawSquareGrid();
-		drawText('Perlin Noise Generator', 20, 25, 18);
 
 		//somenoiseG.drawGraphScaledPoints(somenoise.cosIntCoords, '#00FF00');
 

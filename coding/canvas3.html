@@ -1,236 +1,117 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-<html lang="en">
+<html lang='en'>
+  
   <head>
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Web developer and programmer.'>
+    <meta name='author' content='Ian D. McCunn'>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ian D. McCunn">    
-    <meta name="description" content="Portfolio of new music composer and guitarist Ian D. McCunn. Services for guitar instruction and music composition including scoring, music notation, arranging, and original music.">
+    
+    <link rel='icon'  href='img/favicon.ico'>
+    <!-- <link rel='stylesheet' type='text/css' src='css/normalize.css'> -->
+    <link rel='stylesheet' type='text/css' href='../css/main.css'>
+    <link rel='stylesheet' type='text/css' href='css/code_general.css'>
 
-    <link rel="shortcut icon" href="../sine.ico">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-
-    <title>Ian D. McCunn - Canvas Project 3</title>
-
+    <title>Ian McCunn - Canvas Project 2</title>
     <style type="text/css">
 
-      #newSeed {
+      .textButton {
         display: inline-block;
-        margin: 0 0 0 5px;
-        padding: 10px;
-        border: 1px solid #222;
-        border-radius: 5px;
-        color: #000;
+        color: #333;
+        padding: 3px;
+
+      }
+      .textButton:hover {
       }
 
-      #newSeed:hover {
-        background-color: #222;
+      .textButton a {
         color: #fff;
+        border: 1px solid #fff;
+        padding: 3px;
       }
 
-      .codepenlnk {
-        width: 100px;
+      .textButton a:hover {
+        background-color: #fff;
+        color: #333;
       }
-
-      .cplnk {
+      #newSeed {
         position: relative;
-        display: block;
-        margin: 0 auto;
-        padding: 20px 0 20px 0;
-        text-align: center;
+      
       }
-
-      #c {
-        margin: 5px;
-      }
-
     </style>
   </head>
 
-  <body data-type="background" data-speed="2">
-    <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <body>
+    <div class="all">
 
-    <!--TOP NAVIGATION BAR_______________________________________________-->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navTextPos">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <ul id="nav" class="nav-brand">
-            <li><a class="navbar-brand hovtr" href="../index.html">Ian D. McCunn</a></li>
-          </ul>
-          
+      <div class="header">
+        <div class="page-title">
+          <a href="../index.html">
+            <h1>Ian D. McCunn</h1>
+            <h3>Web Developer</h3>
+          </a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-
-            <!-- Composer Menu -->
-            <li> 
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Composer <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <li><a href="../index.html">Listen</a></li>
-                  <li><a href="../catalogue.html">Compositions</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <!-- Guitarist Menu -->
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Guitarist <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <!--<li><a href="guitarist.html">Audiovisual</a></li>-->
-                  <li><a href="../lessons.html">Guitar Lessons</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Dev <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <li><a href="../coding.html">Web</a></li>
-                  <li><a href="../dsp_projects.html">DSP</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <!--
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Resources<span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <li><a href="externalresources">External Online Resources</a></li>
-                  <li><a href="colleagues">Colleagues</a></li>
-                </ul>
-              </div>
-            </li>
-            -->
-          
-            <!-- Info Menu -->
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Info <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-
-                  <li><a href="../about.html">About</a></li>
-                  <!--<li><a href="vita.html">CV</a></li>-->
-                  <li><a href="../contact.html">Contact</a></li>
-                </ul>
-              </div>
-            </li>
-
+        <div class="nav">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="../code.html">Code</a></li>
           </ul>
         </div>
       </div>
-    </div>
-    <!--END TOP NAVIGATION BAR___________________________________________-->
 
-    <!-- MAIN, PAGE CONTENT______________________________________________-->
-
-    <div class="container" id="maincontent">
-
-      <div style="width: 1024px; margin: auto;">
-      <div>
-        <a href='#' id="newSeed">Generate New Polygon Group</a>
-        </div>
-
-        <canvas id='c'></canvas>
-        <script src="js/canvas3.js"></script>
-      </div>
-      <div class='cplnk'>
-        <a href="http://codepen.io/mcfun/pen/gyjcn" target='_blank'><img src="img/tryoncodepen.png" class='codepenlnk'></a>
-      </div>
-      
-    </div>
-    <!--END MAIN PAGE CONTENT____________________________________________-->
-
-
-    <!-- FOOTER _________________________________________________________-->
-
-      <div class="panel-footer text-center ">
-        
-        <div class="w70">
-          <!--SITEMAP-->
-          <div class="sitemap">
-
-            <div class="sitemapSection">
-              <ul>Composer
-                <li><a href="../index.html">Listen</a></li>
-                <li><a href="../catalogue.html">Catalogue</a></li>
-                <!--<li><a href="projects.html">Projects</a></li>-->
-              </ul>
+      <!-- MAIN, PAGE CONTENT______________________________________________-->
+      <div class="main-content">
+        <div class="container" id="maincontent">
+          <h3>Canvas 3 - Polygons</h3>
+          <div>
+            <canvas id='c'></canvas>
+            <div class="textButton">
+              <button id="newSeed">Generate New Polygon Group</button>
             </div>
-            <div class="sitemapSection">
-              <ul>Guitarist
-                <!-- <li><a href="../guitarist.html">Audiovisual</a></li> -->
-                <li><a href="../instruction.html">Instruction</a></li>
-              </ul>
-            </div>
-            <div class="sitemapSection">
-              <ul>Dev
-                <li><a href="../coding.html">Web</a></li>
-                <li><a href="../dsp_projects.html">DSP</a></li>
-              </ul>
-            </div>
-            <div class="sitemapSection">
-              <ul>Info
-                <li><a href="../about.html">About</a></li>
-                <!--<li><a href="vita.html">CV</a></li>-->
-                <li><a href="../contact.html">Contact</a></li>
-              </ul>
-            </div>
+            <script src="js/canvas3.js"></script>
+          </div>
+          <div class='cplnk'>
+            <a href="http://codepen.io/mcfun/pen/gyjcn" target='_blank'><img src="img/tryoncodepen.png" class='codepenlnk'></a>
+          </div>
           
-          </div>
-          <!--END SITEMAP-->
+        </div>
+      </div>
+      <!--END MAIN PAGE CONTENT____________________________________________-->
 
-          <!--SOCIAL-->
-          <div class="digitalPresence">
-            <ul>
-              <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank"><img src="../img/lin.png"></a></li>
-              <li><a href="http://www.soundcloud.com/iandmccunn" target="_blank"><img src="../img/sc.png"></a></li>
-              <li><a href="http://www.github.com/mcfun" target="_blank"><img src="../img/GitHub-Mark-32px.png"></a></li>
-              <li><a href="http://www.codepen.io/mcfun" target="_blank"><img src="../img/codePenProfile.png"></a></li>
-              <li><a href="http://www.youtube.com/ianmccunn" target="_blank"><img src="../img/yt.png"></a></li>
-              <li><a href="https://twitter.com/ianmccunn" target="_blank"><img src="../img/twit.png"></a></li>
-            </ul>
-          </div>
+      <div class="footer">
         
+        <div class="digital-presence">
+          <ul>
+            <li><a href="https://coderbits.com/mcfun"><img src="../img/digPres/CoderbitsFaceCircleBW.png" title="Ian's Coderbits Profile"></a></li>
+            <li><a href="https://github.com/mcfun"><img src="../img/digPres/GitHub-Mark-Light-64px.png" title="Ian's Github Profile"></a></li>
+            <li><a href="http://codepen.io/mcfun/"><img src="../img/digPres/CP-Button-white-Large.png" title="Ian's CodePen Profile"></a></li>
+            <li><a href="#"><img src=''></a></li>
+          </ul>
         </div>
 
-        <small class="text-center siteStatusCopy">© 2013 McCunn Music. All rights reserved. <span>Created by <a href="">Monad.Dyad:</a></span></small> 
-
+        <div class='copyright'>
+          <p>Code and Design by Ian D. McCunn © 2014</p>
+        </div>
       </div>
-    <!--END FOOTER_______________________________________________________-->
 
+    </div>
 
-    <!-- JavaScript
-    ================================================== -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../js/general.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    
+    <!-- JS 
+    ===============================================-->
+    <!-- <script type='text/javascript' src='js/general.js'></script>-->
+
+    <!-- Analytics -->
+    <script>
+
+    </script>
+
   </body>
+
 </html>
+

@@ -1,14 +1,14 @@
   $(document).on('ready', function(){
 
 
-    $('.checkbox').click (function (){
-
+    $('.slashCheck').on('click', function (){
+      console.log("checkbox click");
 
       var thisCheck = $(this);
       var instr = $(this).parent().attr('id');
       var numIntsr = "<td class='mom'><input type='number' name='quantity' class='numb' value='0' min='0' max='14' id='" + instr + "num' style='float: right;'></td>";
       if (thisCheck.is (':checked')){
-        $('#' + instr + ' ').parent().append($(numIntsr));
+        $('#' + instr + ' ').parent().append(numIntsr);
       }
       else if (thisCheck.attr('checked', false)){
         $('#' + instr + 'num').parent().remove();
@@ -22,7 +22,7 @@
           returnHtml = "<",
           counter = 0;
 
-      $('.checkbox').each(function(){
+      $('.slashCheck').each(function(){
 
         if ($(this).attr('id') != 'sx'){
           if($(this).is(':checked')){
@@ -51,6 +51,7 @@
       });
       returnHtml += ">";
 
+      console.log("did thisng");
 
       document.getElementById('visResult').innerHTML = "<p>" + numsOfInstr + "</p>" + returnHtml;
 

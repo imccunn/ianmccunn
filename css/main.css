@@ -1,0 +1,169 @@
+/** {
+	border: 1px solid #fff;
+}
+*/
+
+@font-face {
+  font-family: 'opensans';
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+}
+body {
+	background-color: #333333;
+	color: #fff;
+	margin: 0;
+	font-family: 'opensans';
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+::selection {
+	background-color: #249100;
+	/*color: #5B07E3;*/
+}
+
+.page-title {
+	text-align: center;
+	margin-bottom: 25.9px;
+}
+
+.page-title a {
+	color: #fff;
+}
+
+.page-title a h1 {
+
+}
+
+.page-title a h3 {
+	
+}
+
+.all {
+	/*max-width: 950px;*/
+	margin: auto;
+	overflow: hidden;
+	
+}
+
+.nav {
+	height: 1.5em;
+	
+}
+
+.nav ul {
+	display: table;
+	list-style-type: none;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    
+    letter-spacing: 2px;
+}
+
+.nav ul li {
+	display: table-cell;
+
+}
+
+.nav ul li a {
+
+	display: block;
+	height: auto;
+	width: 110px;
+
+	color: #fff;
+	text-transform: lowercase;
+}
+
+.nav a:hover:before {
+	content: "{ ";
+	color: #249100;
+}
+
+.nav a:hover:after {
+	content: " }";
+	color: #249100;
+}
+
+.nav a:active:before {
+	content: "{ ";
+}
+
+.nav a:active:after {
+	content: " }";
+}
+
+.selected-nav {
+	
+}
+.selected-nav:before {
+	content: "{ ";
+	color: #249100;
+	font-weight: bold;
+
+}
+.selected-nav:after {
+	content: " }";
+	color: #249100;
+	font-weight: bold;
+
+}
+
+.main-content {
+	max-width: 900px;
+	margin: auto;
+	clear: both;
+	padding: 45px;
+}
+
+.footer {
+	border-top: 1px solid #fff;
+	text-align: center;
+	font-size: .8em;
+	margin: 0 45px 0 45px;
+}
+
+.digital-presence {
+	margin-top: 20px;
+	text-align: center;
+}
+.digital-presence ul {
+	display: table;
+	margin: auto;
+	padding: 0;
+}
+
+.digital-presence ul li {
+	display: table-cell;
+	padding: 5px;
+
+}
+.digital-presence ul li a img {
+	max-width: 32px;
+	display: block;
+	border: 1px solid #333;
+}
+
+/*.digital-presence ul li a img:hover {
+	border: 1px solid #fff;
+}*/
+
+
+
+
+/* Code Page - code.html */
+
+.code-project-list  li {
+	margin-bottom: 25.9px;
+
+}
+
+.code-project-list  li p {
+	margin: 0;
+	margin-left: 25.9px;
+
+}

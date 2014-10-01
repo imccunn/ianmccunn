@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<html lang="en">
+
+<html lang='en'>
+  
   <head>
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Web developer and programmer.'>
+    <meta name='author' content='Ian D. McCunn'>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ian D. McCunn">    
-    <meta name="description" content="Portfolio of new music composer and guitarist Ian D. McCunn. Services for guitar instruction and music composition including scoring, music notation, arranging, and original music.">
+    
+    <link rel='icon'  href='img/favicon.ico'>
+    <!-- <link rel='stylesheet' type='text/css' src='css/normalize.css'> -->
+    <link rel='stylesheet' type='text/css' href='../css/main.css'>
+    <link rel='stylesheet' type='text/css' href='css/code_general.css'>
 
-    <link rel="shortcut icon" href="../sine.ico">
-    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="css/cssColorGrid.css" rel="stylesheet">
-
-    <title>Ian D. McCunn - Color Grid Thing</title>
-
+    <title>Ian McCunn - Code</title>
     
     <style type="text/css">
 
@@ -63,270 +62,151 @@
 
   </head>
 
-  <body data-type="background" data-speed="2">
+  <body>
+    <div class="all">
 
-    <!--TOP NAVIGATION BAR_______________________________________________-->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navTextPos">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <ul id="nav" class="nav-brand">
-            <li><a class="navbar-brand hovtr" href="../index.html">Ian D. McCunn</a></li>
-          </ul>
-          
+      <div class="header">
+        <div class="page-title">
+          <a href="../index.html">
+            <h1>Ian D. McCunn</h1>
+            <h3>Web Developer</h3>
+          </a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-
-            <!-- Composer Menu -->
-            <li> 
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Composer <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <li><a href="../index.html">Listen</a></li>
-                  <li><a href="../catalogue.html">Compositions</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <!-- Guitarist Menu -->
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Guitarist <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <!--<li><a href="guitarist.html">Audiovisual</a></li>-->
-                  <li><a href="../lessons.html">Guitar Lessons</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Dev <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <li><a href="../coding.html">Sandbox</a></li>
-                  <li><a href="../dsp_projects.html">DSP</a></li>
-                </ul>
-              </div>
-            </li>
-
-            <!--
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Resources<span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-                  <li><a href="externalresources">External Online Resources</a></li>
-                  <li><a href="colleagues">Colleagues</a></li>
-                </ul>
-              </div>
-            </li>
-            -->
-          
-            <!-- Info Menu -->
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle hovtr" data-toggle="dropdown">
-                  Info <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" id="nav" role="menu">
-
-                  <li><a href="../about.html">About</a></li>
-                  <li><a href="../vita.html">CV</a></li>
-                  <li><a href="../contact.html">Contact</a></li>
-                </ul>
-              </div>
-            </li>
-
+        <div class="nav">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">CV</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="../code.html">Code</a></li>
           </ul>
         </div>
       </div>
-    </div>
-    <!--END TOP NAVIGATION BAR___________________________________________-->
 
+      <!-- MAIN, PAGE CONTENT______________________________________________-->
+      <div class="main-content">
 
-
-    <!-- MAIN, PAGE CONTENT______________________________________________-->
-    <div class="container" id="maincontent">
-<!--       <div style="background-color: rgba(255, 255, 255, 0.7); margin: auto; width: 800px; padding: 20px;">
-        <h2>CSS Color Grid</h2>
-      </div> -->
-      <div style="display: table; margin: 20px auto 0 auto;">
-        <div class="row">
-          <div class="cell">
-
-            <!--Control Panel for CSS animation grid parameters -->
-            <div id="controls">
-              <form id="controlForm">
-                <i>Try some preset configurations:</i>
-                <div style="border: 1px solid #000; padding-left: 20px;">
-                  <input type="radio" name="preset" id="config1">
-                  <input type="radio" name="preset" id="config2">
-                  <input type="radio" name="preset" id="config3">
-                  <input type="radio" name="preset" id="config4">
-                  <input type="radio" name="preset" id="config5">
-                  <input type="radio" name="preset" id="config6">
-                  <input type="radio" name="preset" id="config7">
-                  <input type="radio" name="preset" id="config8">
-                  <input type="radio" name="preset" id="config9">
-                </div>
-                <div style="display: table;">
-                  <div class="row">
-                    <div class="cell">Box Size</div>
-                    <div class="cell"><input type="text" disabled name="boxSize" id="boxSize" size="10" value="20" style="align: right;"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">Border Radius (px)</div>
-                    <div class="cell"><input type="text" name="boxBRad" id="boxBRad" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">
-                      RGB Rand Bounds
-                    </div>
-                    <div class="cell">
-                      Anim 'from'
-                    </div>
-                    <div class="cell">
-                      Anim 'to'
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">r</div>
-                    <div class="cell"><input type="text" name="redLower" id="rLower" size="10" value="100"></div>
-                    <div class="cell"><input type="text" name="redLower" id="rLowerEnd" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">R</div>
-                    <div class="cell"><input type="text" name="redUpper" id="rUpper" size="10" value="256"></div>
-                    <div class="cell"><input type="text" name="redUpper" id="rUpperEnd" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">g</div>
-                    <div class="cell"><input type="text" name="greenLower" id="gLower" size="10" value="0"></div>
-                    <div class="cell"><input type="text" name="greenLower" id="gLowerEnd" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">G</div>
-                    <div class="cell"><input type="text" name="greeUpper" id="gUpper" size="10" value="0"></div>
-                    <div class="cell"><input type="text" name="greeUpper" id="gUpperEnd" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">b</div>
-                    <div class="cell"><input type="text" name="blueLower" id="bLower" size="10" value="120"></div>
-                    <div class="cell"><input type="text" name="blueLower" id="bLowerEnd" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">B</div>
-                    <div class="cell"><input type="text" name="blueUpper" id="bUpper" size="10" value="256"></div>
-                    <div class="cell"><input type="text" name="blueUpper" id="bUpperEnd" size="10" value="0"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">Min Anim Time (s)</div>
-                    <div class="cell"><input type="text" name="minAnimTime" id="minAnimTime" size="10" value="1"></div>
-                  </div>
-                  <div class="row">
-                    <div class="cell">Max Anim Time (s)</div>
-                    <div class="cell"><input type="text" name="maxAnimTime" id="maxAnimTime" size="10" value="3"></div>
-                  </div>
-                </div>
-
-                <div style="margin: 20px auto 0 auto; text-align: center;"><button type="button" id="updateGrid">Create/Refresh</button></div>
-                <img src="ajax_loader_gray_512.gif" width="20px" id="loadingGif" style="display: none;">
-
-              </form>
+        <!--Control Panel for CSS animation grid parameters -->
+        <div id="controls">
+          <form id="controlForm">
+            <i>Try some preset configurations:</i>
+            <div style="border: 1px solid #000; padding-left: 20px;">
+              <input type="radio" name="preset" id="config1">
+              <input type="radio" name="preset" id="config2">
+              <input type="radio" name="preset" id="config3">
+              <input type="radio" name="preset" id="config4">
+              <input type="radio" name="preset" id="config5">
+              <input type="radio" name="preset" id="config6">
+              <input type="radio" name="preset" id="config7">
+              <input type="radio" name="preset" id="config8">
+              <input type="radio" name="preset" id="config9">
             </div>
-          </div>
-          
-          <div class="cell">
-            <div class="cssanims" id="deltaColorGrid">
-            
+            <div style="display: table;">
+              <div class="row">
+                <div class="cell">Box Size</div>
+                <div class="cell"><input type="text" disabled name="boxSize" id="boxSize" size="10" value="20" style="align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="cell">Border Radius (px)</div>
+                <div class="cell"><input type="text" name="boxBRad" id="boxBRad" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">
+                  RGB Rand Bounds
+                </div>
+                <div class="cell">
+                  Anim 'from'
+                </div>
+                <div class="cell">
+                  Anim 'to'
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell">r</div>
+                <div class="cell"><input type="text" name="redLower" id="rLower" size="10" value="100"></div>
+                <div class="cell"><input type="text" name="redLower" id="rLowerEnd" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">R</div>
+                <div class="cell"><input type="text" name="redUpper" id="rUpper" size="10" value="256"></div>
+                <div class="cell"><input type="text" name="redUpper" id="rUpperEnd" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">g</div>
+                <div class="cell"><input type="text" name="greenLower" id="gLower" size="10" value="0"></div>
+                <div class="cell"><input type="text" name="greenLower" id="gLowerEnd" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">G</div>
+                <div class="cell"><input type="text" name="greeUpper" id="gUpper" size="10" value="0"></div>
+                <div class="cell"><input type="text" name="greeUpper" id="gUpperEnd" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">b</div>
+                <div class="cell"><input type="text" name="blueLower" id="bLower" size="10" value="120"></div>
+                <div class="cell"><input type="text" name="blueLower" id="bLowerEnd" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">B</div>
+                <div class="cell"><input type="text" name="blueUpper" id="bUpper" size="10" value="256"></div>
+                <div class="cell"><input type="text" name="blueUpper" id="bUpperEnd" size="10" value="0"></div>
+              </div>
+              <div class="row">
+                <div class="cell">Min Anim Time (s)</div>
+                <div class="cell"><input type="text" name="minAnimTime" id="minAnimTime" size="10" value="1"></div>
+              </div>
+              <div class="row">
+                <div class="cell">Max Anim Time (s)</div>
+                <div class="cell"><input type="text" name="maxAnimTime" id="maxAnimTime" size="10" value="3"></div>
+              </div>
             </div>
-          </div>
+
+            <div style="margin: 20px auto 0 auto; text-align: center;"><button type="button" id="updateGrid">Create/Refresh</button></div>
+            <img src="ajax_loader_gray_512.gif" width="20px" id="loadingGif" style="display: none;">
+
+          </form>
         </div>
-      </div>
 
-      <div class='cplnk'>
-        <a href="http://codepen.io/mcfun/pen/vgJFH" target='_blank'><img src="img/tryoncodepen.png" class='codepenlnk'></a>
-      </div>
       
-    </div>
-    <!--END MAIN PAGE CONTENT____________________________________________-->
 
-
-    <!-- FOOTER _________________________________________________________-->
-      <div class="panel-footer text-center ">
-        
-        <div class="w70">
-          <!--SITEMAP-->
-          <div class="sitemap">
-
-            <div class="sitemapSection">
-              <ul>Composer
-                <li><a href="../index.html">Listen</a></li>
-                <li><a href="../catalogue.html">Catalogue</a></li>
-                <!--<li><a href="projects.html">Projects</a></li>-->
-              </ul>
-            </div>
-            <div class="sitemapSection">
-              <ul>Guitarist
-                <li><a href="../guitarist.html">Audiovisual</a></li>
-                <li><a href="../instruction.html">Instruction</a></li>
-              </ul>
-            </div>
-            <div class="sitemapSection">
-              <ul>Dev
-                <li><a href="../coding.html">Web</a></li>
-                <li><a href="../dsp_projects.html">DSP</a></li>
-              </ul>
-            </div>
-            <div class="sitemapSection">
-              <ul>Info
-                <li><a href="../about.html">Biography</a></li>
-                <li><a href="../vita.html">CV</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-              </ul>
-            </div>
-          
-          </div>
-          <!--END SITEMAP-->
-
-          <!--SOCIAL-->
-          <div class="digitalPresence">
-            <ul>
-              <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank"><img src="../img/lin.png"></a></li>
-              <li><a href="http://www.soundcloud.com/iandmccunn" target="_blank"><img src="../img/sc.png"></a></li>
-              <li><a href="http://www.github.com/mcfun" target="_blank"><img src="../img/GitHub-Mark-32px.png"></a></li>
-              <li><a href="http://www.codepen.io/mcfun" target="_blank"><img src="../img/codePenProfile.png"></a></li>
-              <li><a href="http://www.youtube.com/ianmccunn" target="_blank"><img src="../img/yt.png"></a></li>
-              <li><a href="https://twitter.com/ianmccunn" target="_blank"><img src="../img/twit.png"></a></li>
-            </ul>
-          </div>
+        <div class="cssanims" id="deltaColorGrid">
         
         </div>
 
-        <small class="text-center siteStatusCopy">© 2013 McCunn Music. All rights reserved. <span>Created by <a href="">Monad.Dyad:</a></span></small> 
 
+        <div class='cplnk'>
+          <a href="http://codepen.io/mcfun/pen/vgJFH" target='_blank'><img src="img/tryoncodepen.png" class='codepenlnk'></a>
+        </div>
+        <script src="js/css_color_grid.js"></script>
       </div>
-    <!--END FOOTER_______________________________________________________-->
+      <!--END MAIN PAGE CONTENT____________________________________________-->
 
+      <div class="footer">
+        
+        <div class="digital-presence">
+          <ul>
+            <li><a href="https://coderbits.com/mcfun" target="_blank"><img src='../img/digPres/CoderbitsFaceCircleBW.png' title="Ian's Coderbits Profile"></a></li>
+            <li><a href="https://github.com/mcfun" target="_blank"><img src="../img/digPres/GitHub-Mark-Light-64px.png" title="Ian's Github Profile"></a></li>
+            <li><a href="http://codepen.io/mcfun/" target="_blank"><img src="../img/digPres/CP-Button-white-Large.png" title="Ian's CodePen Profile"></a></li>
+            <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank"><img src="../img/digPres/LinkedIn-InBug-2C.png" title="Ian's LinkedIn Profile"></a></li>
+          </ul>
+        </div>
 
-    <!-- JavaScript
-    ================================================== -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/general.js"></script>
-    <script src="js/css_color_grid.js" async></script>
-    
+        <div class='copyright'>
+          <p>Code and Design by Ian D. McCunn © 2014</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- JS 
+    ===============================================-->
+    <!-- <script type='text/javascript' src='js/general.js'></script>-->
+
+    <!-- Analytics -->
+    <script>
+
+    </script>
+
   </body>
+
 </html>

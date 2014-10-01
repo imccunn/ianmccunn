@@ -1,0 +1,152 @@
+/* Todo List Styles */
+
+.container {
+  display: block;
+  width: 470px;
+  margin: 20px auto 0;
+  padding: 29.5px;
+  border: 1px solid #fff;
+}
+.container ul {
+  margin: 0;
+  padding: 0;
+}
+.container li * {
+  float: left;
+}
+.container li, h3 {
+  clear:both;
+  list-style:none;
+}
+
+.container h2 {
+  margin: 10px;
+}
+input, button {
+  outline: none;
+}
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 14px;
+  width: 60px;
+  cursor: pointer;
+  padding: 5px 10px;
+
+}
+button:hover {
+  color: #fff;
+}
+
+button.add:hover {
+  background-color: #0FC57C
+}
+
+button.delete:hover {
+  background-color: #CF2323;
+}
+button.edit:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+button#purge {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+button#purge:hover {
+  background-color: #000;
+  border: 1px solid #FF6A00;
+  color: #FF6A00;
+}
+/* Heading */
+/*.container h3,*/
+.container label[for='new-task'] {
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border-bottom: 2px solid #333;
+  padding: 10px 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#completed-title {
+  display: inline-block;
+  padding: 5px;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  height: 14px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 2px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px 0;
+}
+input#new-task {
+  float: left;
+  width: 318px;
+  padding: 5px;
+}
+
+/* Task list */
+.container li {
+  overflow: hidden;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+.container li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 9px;
+}
+.container li > label {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  width: 237px;
+  padding: 0 0 0 11px;
+  top: 4px;
+}
+.container li >  input[type="text"] {
+  width: 226px;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Edit Task */
+.container ul li input[type=text] {
+  display: none;
+}
+
+.container ul li.editMode input[type=text] {
+  display:block;
+}
+
+.container ul li.editMode label {
+  display:none;
+}
+
+.container ul li.tasks-complete {
+  color: #0FC57C;
+  border-bottom: 0;
+}

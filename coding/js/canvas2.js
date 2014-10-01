@@ -1,8 +1,8 @@
 (function() {
 
 	//canvas size
-	var width = 1024,
-	  	height = 768,
+	var width = 800,
+	  	height = 600,
 		c = document.getElementById('c'), 
 		ctx = c.getContext('2d');
 
