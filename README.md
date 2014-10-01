@@ -7,4 +7,4 @@ Web Development Portfolio site of Ian McCunn
 - CV
 - Work
 - Code
-  - Samples of code projects
+
