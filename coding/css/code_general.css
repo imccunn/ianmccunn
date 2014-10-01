@@ -36,26 +36,6 @@ margin: 0 0 50px 0;
   margin: 10px 0 0 10px;
 }
 
-.toolPanel:hover .transGrey {
-  color: #fff;
-  opacity: 1;
-}
-
-.transGrey {
-  color: #fff;
-
-  padding: 10px 15px 0 15px;
-  background-color: rgba(34, 34, 34, 0.6);
-  opacity: 0;
-  -webkit-transition: opacity .5s cubic-bezier(0, 0, 1, 1);
-  -moz-transition: opacity .5s cubic-bezier(0, 0, 1, 1);
-  -o-transition: opacity .5s cubic-bezier(0, 0, 1, 1);
-  transition: opacity .5s cubic-bezier(0, 0, 1, 1);
-}
-
-.codeDesc {
-  display: block;
-}
 
 
 .codePanel {
