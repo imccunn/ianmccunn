@@ -78,6 +78,11 @@ a {
 
 	color: #fff;
 	text-transform: lowercase;
+	-webkit-transition: color 0.3s;
+}
+
+.nav a:hover {
+	color: #249100;
 }
 
 .nav a:hover:before {
