@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 
-<html lang='en'>
+<html lang="en">
   
   <head>
     
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
-    <meta name='description' content='Web developer and programmer.'>
-    <meta name='author' content='Ian D. McCunn'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="Web developer and programmer.">
+    <meta name="author" content="Ian D. McCunn">
 
     
-    <link rel='icon'  href='img/favicon.ico'>
+    <link rel="icon"  href="../img/favicon.ico">
     <!-- <link rel='stylesheet' type='text/css' src='css/normalize.css'> -->
-    <link rel='stylesheet' type='text/css' href='../css/main.css'>
-    <link rel='stylesheet' type='text/css' href='css/code_general.css'>
-
-    <title>Ian McCunn - Code</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/code_general.css">
+    <title>Ian McCunn - CSS Color Grid</title>
     
     <style type="text/css">
 
@@ -37,11 +36,11 @@
       }
 
       #controls {
-        margin-left: 20px; 
-        margin-right: 20px;
+        margin: 0 auto;
         padding: 10px; 
         border: 1px solid #000; 
         background-color: rgba(255,255,255, 0.2);
+        max-width: 400px;
       }
 
       .codepenlnk {
@@ -59,6 +58,15 @@
         margin-bottom: 29.5px;
       }
 
+      #updateGrid {
+        position: relative;
+        padding: 20px 40px;
+        margin: 20px 0;
+      }
+
+      .updateGridHolder {
+        text-align: center;
+      }
 
     </style>
 
@@ -168,8 +176,7 @@
               </div>
             </div>
 
-            <div style="margin: 20px auto 0 auto; text-align: center;"><button type="button" id="updateGrid">Create/Refresh</button></div>
-            <img src="ajax_loader_gray_512.gif" width="20px" id="loadingGif" style="display: none;">
+            <div class="updateGridHolder"><button type="button" id="updateGrid">Create/Refresh</button></div>
 
           </form>
         </div>
