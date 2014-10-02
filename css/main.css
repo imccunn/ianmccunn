@@ -163,6 +163,15 @@ a {
 }*/
 
 
+/* Index Page Styles */
+
+p.lead {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
 .index-content p {
 	text-indent: 29.5px;
 	letter-spacing: 1px;
