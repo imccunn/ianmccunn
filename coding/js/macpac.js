@@ -25,6 +25,9 @@
 
 	function init(){
 		initCalc.addEventListener('click', checkInput);
+
+		// fetch input once
+		checkInput();
 	}
 
 
@@ -38,13 +41,21 @@
 	// @return none
 
 	function checkInput(){
+		console.log("run");
 
-		// grab these two values first
-		var numPermutations = document.getElementById('nPerms').value,
-				setSize = document.getElementById('setSize').value;
+		// set the size of the set, optionally create several different random patterns
+		var numPermutations = document.getElementById('nPerms').value;
+		var setSize = document.getElementById('setSize').value;
 
-		// Check user input, fail fast
-		if(	!(numPermutations <= 500) || !(numPermutations > 0) || !numPermutations.trim().length || !(setSize <= 20) || !(setSize > 1)){
+		// Check user input, fail fasts
+		// 1. check set size and limit it
+		if( !(setSize <= 20) || !(setSize > 1)) {
+			alert("Check your input and try again.");
+			return;
+		}
+
+		// check number of patterns and limit
+		if (!(numPermutations <= 500) || !(numPermutations > 0) || !numPermutations.trim().length){
 			alert("Check your input and try again.");
 			return;
 		}
@@ -219,30 +230,32 @@
 				output = "<table>";
 
 		// Add the statistical data to the DOM
-		for ( i = 5 - 1; i >= 0; i--) {
-			percent = (statData[i] / tableData.flat.length) * 100;
-			distAttackType[i] = percent.toFixed(2);
-		}
+		// for ( i = 5 - 1; i >= 0; i--) {
+		// 	percent = (statData[i] / tableData.flat.length) * 100;
+		// 	distAttackType[i] = percent.toFixed(2);
+		// }
 
-		document.getElementById('fpick').innerHTML = distAttackType[0];
-		document.getElementById('find').innerHTML = distAttackType[1];
-		document.getElementById('fmid').innerHTML = distAttackType[2];
-		document.getElementById('fanu').innerHTML = distAttackType[3];
-		document.getElementById('fpinky').innerHTML = distAttackType[4];
-
-
+		// document.getElementById('fpick').innerHTML = distAttackType[0];
+		// document.getElementById('find').innerHTML = distAttackType[1];
+		// document.getElementById('fmid').innerHTML = distAttackType[2];
+		// document.getElementById('fanu').innerHTML = distAttackType[3];
+		// document.getElementById('fpinky').innerHTML = distAttackType[4];
 
 		// Add the tabular data to the DOM
-		for ( i = 0; i < tableData.whole.length; i++ ) {
-			output += ("<tr><td>" + (i+1) + " :&nbsp&nbsp </td><td>" + tableData.whole[i].toString() + "</td></tr>");
+		var patternDomString;
+
+		for (var i = 0; i < tableData.whole.length; i++ ) {
+			patternDomString = "";
+			for (var j = 0; j < tableData.whole[i].length; j++) {
+				patternDomString += tableData.whole[i][j] + "&nbsp&nbsp";
+			}
+			output += ("<tr><td>" + patternDomString + "</td></tr>");
 		}
 		output += "</table>";
 
 		// append to the DOM
 		document.getElementById('result').innerHTML = output;
 	}
-
-
 
 	// **************
 	// Bootstrap the application by running init()

@@ -14,7 +14,7 @@
     <link rel='icon'  href='img/favicon.ico'>
     <!-- <link rel='stylesheet' type='text/css' src='css/normalize.css'> -->
     <link rel='stylesheet' type='text/css' href='../css/main.css'>
-    <link rel='stylesheet' type='text/css' href='coding/css/code_general.css'>
+    <link rel='stylesheet' type='text/css' href='css/code_general.css'>
 
     <title>Ian McCunn - Code</title>
 
@@ -24,7 +24,7 @@
         float: left;
         clear: left;
         width: 175px;
-        text-align: right;
+        text-align: left;
         margin-right: 8px;
       }
 
@@ -33,6 +33,7 @@
       }
       #nPerms {
         margin-top: 5px;
+        display: none;
       }
 
       .descCont{
@@ -47,8 +48,9 @@
       }
 
       #result{
-        font-size: 26px; 
-        display: block; 
+        font-size: 22px; 
+        display: block;
+        margin: 10px auto;
 
       }
 
@@ -62,6 +64,27 @@
         border: 2px solid #000; 
         margin-top: 10px; 
         overflow: hidden; 
+        padding: 20px;
+      }
+
+      #initCalc {
+
+        background-color: rgba(137, 137, 137, .7);
+        padding: 10px 29.5px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        margin: 0 auto;
+      }
+
+      #initCalc:hover {
+        background-color: rgba(70, 70, 70, .7);
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+      }
+
+        input[type="text"] {
+          width: 33px;
+        }
       }
     </style>
 
@@ -102,8 +125,7 @@
       <div class="program">
 
         <!--******** Program Input *********************************-->
-        <div style="border: 0px solid #000; margin: 10px;">
-          <h4><i>Input</i></h4>
+        <div>
   				<form>
 
             <label>Hybrid Picking</label><input id="hybridStyle" name="pickingStyle" type="radio" checked> <br>
@@ -112,38 +134,25 @@
             <label>Exclude pinky</label><input id="noPinky" name="noPinkyBox" type="checkbox"> <br>
 
   					<label>Size of Pattern</label>
-  					<input id="setSize" type="text" width="50px;" value="12"/><small><i>(limited to a size of 20)</i></small><br>
-  					<label>Number of Patterns</label>
-  					<input id="nPerms" type="text" width="50px;" value="4"/><small><i>(limited to 500 sets)</i></small><br><br>
+  					<input id="setSize" type="text" value="12"/><small><i>(limited to a size of 20)</i></small><br>
+  					<!-- <label>Number of Patterns</label> -->
+  					<input id="nPerms" type="text" value="1"/><!-- <small><i>(limited to 500 sets)</i></small><br><br> -->
   					<input id="initCalc" type="button" value="Generate" style="margin: auto;" />
 
 
   				</form>
         </div>
+
+        <!--******** Program Output *********************************-->
+        <div class="lilPad">
+          <h5>Picking Attack Patterns:</h5>
+          <p id="result">
+
+          </p>
+        </div>
       </div>
 
-      <!--******** Program Output *********************************-->
-			<div class="lilPad">
-        <hr>
-        <h4><i>Output</i></h4>
-				<h5>Picking Attack Patterns:</h5>
-				<p id="result">
-
-				</p>
-
-        <div id="attackStats">
-          <h5><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Attack Distributions:</a></h5>
-          <div id="collapse1" class="panel-collapse collapse">
-            <ul>
-              <li>Frequency of <span class="attTypes">p&nbsp;</span>: <span id="fpick" class="distributions">0.00</span>%</li>
-              <li>Frequency of <span class="attTypes">i&nbsp;</span>: <span id="find" class="distributions">0.00</span>%</li>
-              <li>Frequency of <span class="attTypes">m&nbsp;</span>: <span id="fmid" class="distributions">0.00</span>%</li>
-              <li>Frequency of <span class="attTypes">a&nbsp;</span>: <span id="fanu" class="distributions">0.00</span>%</li>
-              <li>Frequency of <span class="attTypes">c&nbsp;</span>: <span id="fpinky" class="distributions">0.00</span>%</li>
-            </ul>
-          </div>
-        </div>
-			</div>
+      
 
     </div>
     <!--END MAIN PAGE CONTENT____________________________________________-->
@@ -168,16 +177,16 @@
     <!-- JS 
     ===============================================-->
     <!-- <script type='text/javascript' src='js/general.js'></script>-->
-    <script src="js/macpac.js"></script>
+    <script type="text/javascript" src="js/macpac.js"></script>
     <!-- Analytics -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-55319861-1', 'auto');
-      ga('send', 'pageview');
+      // ga('create', 'UA-55319861-1', 'auto');
+      // ga('send', 'pageview');
 
     </script>
 
