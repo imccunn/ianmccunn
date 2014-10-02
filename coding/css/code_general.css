@@ -17,6 +17,10 @@ button:hover {
 margin: 0 0 50px 0;
 }
 
+.code-project-list {
+  line-height: 1.8em;
+}
+
 .toolPanel {
   height: 200px;
   width: 300px;
