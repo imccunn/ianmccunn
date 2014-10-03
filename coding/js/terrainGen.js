@@ -44,7 +44,6 @@
 	}
 
 
-
 	function Graph() {
 		this.drawnYVals = [];
 		this.drawnXVals = [];
