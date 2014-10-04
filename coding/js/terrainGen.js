@@ -1,3 +1,13 @@
+// ****************************************
+// 1d Perlin Noise Generator
+// 
+// Description: This generates '1 dimensional' perlin noise
+// 	for the purposes of example and education.
+//
+//
+// Made by: Ian McCunn, @ianmccunn, git: mcfun
+
+
 (function () {
 
 	'use strict';
@@ -44,6 +54,12 @@
 	}
 
 
+	// ******************************************
+	// Graph Object
+	//
+	// Description: Takes function values, scales them to the graph size in pixels and draws
+	//
+	//
 	function Graph() {
 		this.drawnYVals = [];
 		this.drawnXVals = [];
@@ -359,7 +375,6 @@
 	}
 
 
-	var fLoop;
 	function frameLoop() {
 		clear();
 
@@ -398,6 +413,8 @@
 	perlin1G.checkGSP();
 
 
+
+	// Bind Click events to Generate and smooth buttons
 	document.getElementById('smooth').addEventListener('click', function() {
 		var factor = document.getElementById('smoothFactor').value;
 		perlin1.smooth(factor);
@@ -414,6 +431,8 @@
 		perlin1G.checkGSP();
 		frameLoop();
 	});
+
+	
 	frameLoop();
 	
 
