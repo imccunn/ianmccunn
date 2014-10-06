@@ -49,7 +49,7 @@
 
 		// Check user input, fail fasts
 		// 1. check set size and limit it
-		if( !(setSize <= 20) || !(setSize > 1)) {
+		if( !(setSize <= 400) || !(setSize > 1)) {
 			alert("Check your input and try again.");
 			return;
 		}
@@ -206,7 +206,6 @@
 				setForDist.push( tempCombo[j] );
 			}
 		}
-
 		return {
 			flat: setForDist,
 			whole: allSets
@@ -229,17 +228,17 @@
 		var distAttackType = [0,0,0,0,0],
 				output = "<table>";
 
-		// Add the statistical data to the DOM
-		// for ( i = 5 - 1; i >= 0; i--) {
-		// 	percent = (statData[i] / tableData.flat.length) * 100;
-		// 	distAttackType[i] = percent.toFixed(2);
-		// }
+		//Add the statistical data to the DOM
+		for ( i = 5 - 1; i >= 0; i--) {
+			percent = (statData[i] / tableData.flat.length) * 100;
+			distAttackType[i] = percent.toFixed(2);
+		}
 
-		// document.getElementById('fpick').innerHTML = distAttackType[0];
-		// document.getElementById('find').innerHTML = distAttackType[1];
-		// document.getElementById('fmid').innerHTML = distAttackType[2];
-		// document.getElementById('fanu').innerHTML = distAttackType[3];
-		// document.getElementById('fpinky').innerHTML = distAttackType[4];
+		document.getElementById('fpick').innerHTML = distAttackType[0];
+		document.getElementById('find').innerHTML = distAttackType[1];
+		document.getElementById('fmid').innerHTML = distAttackType[2];
+		document.getElementById('fanu').innerHTML = distAttackType[3];
+		document.getElementById('fpinky').innerHTML = distAttackType[4];
 
 		// Add the tabular data to the DOM
 		var patternDomString;
