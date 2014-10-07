@@ -1,0 +1,49 @@
+.cssanims {
+  width: 560px;
+  margin: auto;
+  line-height: 9px;
+  padding-top: 0;
+
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 3px;
+}
+
+#controls {
+  margin: 0 auto;
+  padding: 10px; 
+  border: 1px solid #000; 
+  background-color: rgba(255,255,255, 0.2);
+  max-width: 400px;
+}
+
+.codepenlnk {
+  width: 100px;
+}
+.cplnk {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+
+#deltaColorGrid {
+  margin-bottom: 29.5px;
+}
+
+#updateGrid {
+  position: relative;
+  padding: 20px 40px;
+  margin: 20px 0;
+}
+
+.updateGridHolder {
+  text-align: center;
+}

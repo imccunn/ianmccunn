@@ -14,69 +14,10 @@
 		<link rel="icon"  href="img/object.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/cv-page-styles.css">
 
 		<title>Ian McCunn - CV</title>
-		<style type="text/css">
-			
-			.cv {
-				width: 100%;
-			}
 
-			.main-content {
-				padding: 45px 0;
-
-			}
-
-			.sect-content {
-				padding: 0 0 0 37px;
-			}
-
-			.sect-content div {
-				padding: 0 0 0 20px;
-			}
-
-			.sect-content h4 {
-				margin: 0 0 10px 0;
-			}
-
-			ul.list-inline {
-				margin: 10px 0;
-			}
-
-			.list-inline {
-				display: inline;
-			}
-			.list-inline li {
-				display: inline;
-			}
-
-			.list-inline li:after {
-				content: ' - ';
-			}
-
-			.list-inline li:last-child:after {
-				content: '';
-			}
-
-			#employment ul li h5 {
-				margin: 0;
-			}
-			#employment ul li h4 {
-				margin-bottom: 0;
-			}
-
-			.emp-responsibilities {
-				list-style-type: none;
-			}
-			.emp-responsibilities li:before {
-				content: '- ';
-			}
-
-			.inline, .inline * {
-				display: inline-block;
-			}
-
-		</style>
 	</head>
 
 	<body>
@@ -86,13 +27,13 @@
 		<div class="all">
 
 			<div class="header">
-				<div class="page-title">
+				<div class="page-title" id="pp">
 					<a href="index.html">
 						<h1>Ian D. McCunn</h1>
 						<h3>Web Developer</h3>
 					</a>
 				</div>
-				<div class="nav">
+				<div class="nav" id="nav">
 					<ul>
 						<li><a href="code.html">Code</a></li>
 						<li><a class="selected-nav" href="cv.html">CV</a></li>
@@ -103,22 +44,39 @@
 
 			<div class="main-content">
 
-				<div class="cv">
+				<div class="cv" id="cv">
 					<div class="cv-head">
+						<div class="cv-head-title">
+							<h1>Ian D. McCunn</h1>
+							<h2>Web Developer</h2>
+						</div>
 						
+						<ul class="cv-head-contact">
+							<li><a href="mailto: ianmccunn@gmail.com" id="cv-head-email" title="Send Email to Ian (mailto)">ian.mccunn@gmail.com</a></li>
+							<li><a href="tel:2057374733" id="cv-head-phone">(205) 737-4733</a></li>
+						</ul>
+
+						<ul class="pageNavMenu">
+							Jump to:
+							<li><a href="#edu">Education</a></li>
+							<li><a href="#tech">Technical</a></li>
+							<li><a href="#webwork">Web Work</a></li>
+							<li><a href="#emp">Employment</a></li>
+						</ul>
 					</div>
 
-					<div id="areasOfInterests">
+					<div class="cv-section" id="areasOfInterests">
 						<h2>Areas of Interest</h2>
 						<ul>
-							<li>Web Based Single Page Applications for enterprises, education and research.</li>
+							<li>Web Based Single Page Applications for enterprise, education and research.</li>
 							<li>Procedural content generation and generative grammars in games and music.</li>
-							<li>Music Composition</li>
+							<li>Applications for music composition, composer administrative tasks, music performance, music education and guitar instruction.</li>
 
 						</ul>
 					</div>
 
-					<div id="edu">
+					<div class="cv-section">
+						<a id="edu" class="anchor"></a>
 						<h2>Education</h2>
 						<div class="sect-content">
 							<div>
@@ -134,7 +92,7 @@
 									<li>
 										<p>Pluralsight - <i>ongoing</i></p>
 										<ul>
-											<li>JavaScript, Angular JS, Mongo DB</li>
+											<li>JavaScript, Angular JS, Mongo DB, UI and App Architecture, Ember JS, MEAN Stack</li>
 										</ul>
 									</li>
 								</ul>
@@ -145,7 +103,7 @@
 								<ul>
 									<li>Master's in Music Composition - 2012</li>
 									<li>Bachelor's in Music Composition - 2010</li>
-									<li>Secondary focus: Computer Music Composition and Programming (<a href=""></a></li>
+									<li>Secondary focus: Computer Music Composition and Programming (<a href="http://www.wwu.edu/depts/wweams/" target="_blank" title="Wester Washington Electro-Acoustic Music Studio">WWEAMS Studio</a>)</li>
 									<li>Computer Science Courses: Discrete Functions and Algorithms (scheme), C++, Java, Dynamic HTML</li>
 								</ul>
 							</div>
@@ -153,7 +111,9 @@
 						</div>
 					</div>
 
-					<div id="technical">
+					<!-- ******************** Technical ******************** -->
+					<div class="cv-section">
+						<a id="tech" class="anchor"></a>
 						<h2>Technical</h2>
 						<div class="sect-content">
 							<ul>
@@ -209,14 +169,12 @@
 
 								<li>
 									<h3>Operating Systems:</h3>
-									<div class="inline">
-										
-										<ul class="list-inline">
-											<li>Unix</li>
-											<li>Windows</li>
-											<li>OSX</li>
-										</ul>
-									</div>
+									<ul class="list-inline">
+										<li>Unix</li>
+										<li>Ubuntu</li>
+										<li>Windows</li>
+										<li>OS X</li>
+									</ul>
 								</li>
 							</ul>
 
@@ -224,31 +182,33 @@
 					</div>
 
 
-					<div id="webwork">
+					<div class="cv-section">
+						<a id="webwork" class="anchor"></a>
 						<h2>Web Development Work</h2>
 						<div class="sect-content">
 							<ul>
 
 								<li>
-									<h4><a href="www.nwfirstaidtraining.com" target="_blank">Northwest First Aid Training</a> - <i>4/2014</i></h4> 
+									<h4><a href="www.nwfirstaidtraining.com" target="_blank" title="Northwest First Aid Training">Northwest First Aid Training</a> - <i>4/2014</i></h4> 
 									<p>NW First Aid Training is a local business that provides First Aid and CPR Certifications for individuals, businesses, and healthcare professionals.</p>
 								</li>
 
 								<li>
-									<h4><a href="http://www.mccunnmusic.com" target="_blank">McCunn Music</a> - <i>8/2013 - 1/2014</i></h4>
+									<h4><a href="http://www.mccunnmusic.com" target="_blank" title="Ian's Music Composition Website">McCunn Music</a> - <i>8/2013 - 1/2014</i></h4>
 									<p>Music Composition Portfolio and Services, and Guitar Instruction services.</p>
 								</li>
 
-								<li>
-									<h4><a href="http://www.jonbash.com" target="_blank">Jon Bash, Composer</a> - <i>9/2014</i></h4>
+								<!-- <li>
+									<h4><a href="http://www.jonbash.com" target="_blank" title="Jon Bash - Composer, Musician">Jon Bash, Composer</a> - <i>9/2014</i></h4>
 									<p>Composer, musician and educator. Provided assistance on final touches to Bootstrap leveraged website including CSS organization and w3c conformance.</p>
-								</li>
+								</li> -->
 
 							</ul>
 						</div>
 					</div>
 
-					<div id="employment">
+					<div class="cv-section">
+						<a id="emp" class="anchor"></a>
 						<h2>Employment</h2>
 						<ul>
 							<li>
@@ -283,7 +243,8 @@
 						</ul>
 					</div>
 
-					<div id="presence">
+					<div class="cv-section">
+						<a id="presence" class="anchor"></a>
 						<h2>Online Presence</h2>
 						<div class="sect-content">
 							<ul>
@@ -320,16 +281,18 @@
 		<!-- JS 
 		===============================================-->
 		<!-- <script type='text/javascript' src='js/general.js'></script>-->
+		<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/page-dynamics.js"></script>
 
 		<!-- Analytics -->
 		<script>
-		  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  // ga('create', 'UA-55319861-1', 'auto');
-		  // ga('send', 'pageview');
+		  ga('create', 'UA-55319861-1', 'auto');
+		  ga('send', 'pageview');
 
 		</script>
 

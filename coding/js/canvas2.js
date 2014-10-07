@@ -10,7 +10,7 @@
 	c.height = height;
 
 	// Number of 'rain' pixels on canvas at any given time
-	var numDots = 3000,
+	var numDots = 2000,
 			dots = [];
 
 	//init dots storage
@@ -208,6 +208,7 @@
 	  }
 	  
 	  DeltaPoints(frameCount);
+
 	  requestAnimationFrame(frameLoop);
 	 }
 	 

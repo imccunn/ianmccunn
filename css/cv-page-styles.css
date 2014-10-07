@@ -1,0 +1,125 @@
+.cv {
+	width: 100%;
+}
+
+.cv-head {
+	display: none;
+}
+
+.cv-head-title {
+	float: left;
+	padding: 0 0 0 40px;
+}
+.cv-head-title h2 {
+	padding: 0 0 0 10px;
+}
+
+.cv-head-contact {
+	float: right; 
+	list-style-type: none; 
+	margin-top: 22px; 
+	height: auto;
+}
+.cv-head-contact li {
+	margin: 10px;
+}
+
+#cv-head-email {
+	padding: 5px 10px; 
+	background-color: #444;
+	border-radius: 3px;
+}
+
+#cv-head-email:hover {
+	background-color: #1C1C1C;
+}
+
+#cv-head-phone {
+	padding: 7px 10px;
+}
+
+.cv-section {
+	padding: 20px 0;
+	border-top: 1px solid #fff;
+	border-left: 5px solid rgba(0,0,0,0);
+	border-right: 5px solid rgba(0,0,0,0);
+	overflow: hidden;
+	clear: both;
+}
+
+.main-content {
+	padding: 45px 0;
+
+}
+
+.sect-content {
+	padding: 0 0 0 37px;
+}
+
+.sect-content div {
+	padding: 0 0 0 20px;
+}
+
+.sect-content h4 {
+	margin: 0 0 10px 0;
+}
+
+ul.list-inline {
+	margin: 10px 0;
+}
+
+.list-inline {
+	display: inline;
+}
+.list-inline li {
+	display: inline;
+}
+
+.list-inline li:after {
+	content: ' - ';
+}
+
+.list-inline li:last-child:after {
+	content: '';
+}
+
+#employment ul li h5 {
+	margin: 0;
+}
+#employment ul li h4 {
+	margin-bottom: 0;
+}
+
+.emp-responsibilities {
+	list-style-type: none;
+}
+.emp-responsibilities li:before {
+	content: '- ';
+}
+
+.inline, .inline * {
+	display: inline-block;
+}
+
+.pageNavMenu {
+	clear: both; 
+	font-size: 0.8em;
+	text-align: center;
+}
+@media print {
+	.pageNaveMenu {
+		display: none;
+	}
+}
+
+.pageNavMenu li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+a.anchor {
+	display: block; 
+	position: relative; 
+	top: -50px; 
+	visibility: hidden;
+}
