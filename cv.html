@@ -24,6 +24,7 @@
 
 			.main-content {
 				padding: 45px 0;
+
 			}
 
 			.sect-content {
@@ -42,6 +43,9 @@
 				margin: 10px 0;
 			}
 
+			.list-inline {
+				display: inline;
+			}
 			.list-inline li {
 				display: inline;
 			}
@@ -65,7 +69,11 @@
 				list-style-type: none;
 			}
 			.emp-responsibilities li:before {
+				content: '- ';
+			}
 
+			.inline, .inline * {
+				display: inline-block;
 			}
 
 		</style>
@@ -101,21 +109,18 @@
 					</div>
 
 					<div id="areasOfInterests">
-						<h2>Areas of Interest</h2>	
+						<h2>Areas of Interest</h2>
+						<ul>
+							<li>Web Based Single Page Applications for enterprises, education and research.</li>
+							<li>Procedural content generation and generative grammars in games and music.</li>
+							<li>Music Composition</li>
+
+						</ul>
 					</div>
 
 					<div id="edu">
 						<h2>Education</h2>
 						<div class="sect-content">
-							<div>
-								<h3>Western Washington University</h3>
-								<ul>
-									<li>Master's in Music Composition - 2012</li>
-									<li>Bachelor's in Music Composition - 2010</li>
-									<li>Secondary focus: Computer Music Composition and Programming</li>
-									<li>Computer Science Courses: Discrete Functions and Algorithms (scheme), C++, Java, Dynamic HTML</li>
-								</ul>
-							</div>
 							<div>
 								<h3>Web Based Web Development Training and Research</h3>
 								<ul>
@@ -135,48 +140,86 @@
 								</ul>
 
 							</div>
+							<div>
+								<h3>Western Washington University</h3>
+								<ul>
+									<li>Master's in Music Composition - 2012</li>
+									<li>Bachelor's in Music Composition - 2010</li>
+									<li>Secondary focus: Computer Music Composition and Programming (<a href=""></a></li>
+									<li>Computer Science Courses: Discrete Functions and Algorithms (scheme), C++, Java, Dynamic HTML</li>
+								</ul>
+							</div>
+
 						</div>
 					</div>
 
 					<div id="technical">
 						<h2>Technical</h2>
 						<div class="sect-content">
+							<ul>
+								<li id="langs">
+									<h3>Languages</h3>
+									<div class="sect-content">	
+										<div class="inline">
+											<h4>Web</h4>
+											<ul class="list-inline">
+												<li>JavaScript</li>
+												<li>jQuery</li>
+												<li>HTML/Jade</li>
+												<li>CSS/SASS</li>
+												<li>PHP</li>
+											</ul>
+										</div>
 
-							<div id="langs">
-								<h3>Languages</h3>
-								<div class="sect-content">	
-									<h4>Web</h4>
-									<ul class="list-inline">
-										<li>JavaScript</li>
-										<li>jQuery</li>
-										<li>HTML/Jade</li>
-										<li>CSS/SASS</li>
-										<li>PHP</li>
-									</ul>
+										<div class="inline">
+											<h4>Other</h4>
+											<ul class="list-inline">
+												<li>C++/C#</li>
+												<li>Scheme</li>
+												<li>Pure Data</li>
+												<li>supercollider/smalltalk</li>
+											</ul>
+										</div>
+									</div>
+								</li>
 
-									<h4>Other</h4>
-									<ul class="list-inline">
-										<li>C++/C#</li>
-										<li>Scheme</li>
-										<li>Pure Data</li>
-										<li>supercollider/smalltalk</li>
-									</ul>
-								</div>
-							</div>
-
-							<div id="tools">
-								<h3>Tools</h3>
+								<li id="tools">
+									<h3>Software/Dev Tools</h3>
 									<ul class="list-inline">
 										<li>Sublime Text</li>
+										<li>Git</li>
 										<li>jsHint</li>
+										<li>Uglify JS</li>
+										<li>Modernizr</li>
+										<li>Yeomen</li>
+										<li>Chrome Dev Tools</li>
+										<li>Bootstrap</li>
+									</ul>
+								</li>
+
+								<li>
+									<h3>Web Infrastructure:</h3>
+									<ul class="list-inline">
 										<li>nginx</li>
 										<li>apache</li>
+										<li>IIS</li>
 										<li>Digital Ocean</li>
-										<li>ubuntu</li>
-										<li>Chrome Dev Tools</li>
-										<li>W3C</li>
 									</ul>
-							</div>
+								</li>
+
+								<li>
+									<h3>Operating Systems:</h3>
+									<div class="inline">
+										
+										<ul class="list-inline">
+											<li>Unix</li>
+											<li>Windows</li>
+											<li>OSX</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+
 						</div>
 					</div>
 
@@ -187,17 +230,17 @@
 							<ul>
 
 								<li>
-									<h4><a href="www.nwfirstaidtraining.com">Northwest First Aid Training</a> - <i>4/2014</i></h4> 
+									<h4><a href="www.nwfirstaidtraining.com" target="_blank">Northwest First Aid Training</a> - <i>4/2014</i></h4> 
 									<p>NW First Aid Training is a local business that provides First Aid and CPR Certifications for individuals, businesses, and healthcare professionals.</p>
 								</li>
 
 								<li>
-									<h4><a href="http://www.mccunnmusic.com">McCunn Music</a> - <i>8/2013 - 1/2014</i></h4>
+									<h4><a href="http://www.mccunnmusic.com" target="_blank">McCunn Music</a> - <i>8/2013 - 1/2014</i></h4>
 									<p>Music Composition Portfolio and Services, and Guitar Instruction services.</p>
 								</li>
 
 								<li>
-									<h4><a href="http://www.jonbash.com">Jon Bash, Composer</a> - <i>9/2014</i></h4>
+									<h4><a href="http://www.jonbash.com" target="_blank">Jon Bash, Composer</a> - <i>9/2014</i></h4>
 									<p>Composer, musician and educator. Provided assistance on final touches to Bootstrap leveraged website including CSS organization and w3c conformance.</p>
 								</li>
 
@@ -209,17 +252,31 @@
 						<h2>Employment</h2>
 						<ul>
 							<li>
+								<h4>McCunn Music - <small><i>6/2012-Present</i></small></h4>
+								<ul class="emp-responsibilities">
+									<li>Music Composition for media and performance</li>
+									<li>Notation, Arranging, Orchestration</li>
+									<li>Private Classical Guitar Instruction</li>
+								</ul>
+							</li>
+
+							<li>
 								<h4>Lasher, Holzapfel, Sperry & Ebberson - <small><i>6/2012-Present</i></small></h4>
 								<h5>Docketing Coordinator</h5>
 								<ul class="emp-responsibilities">
-									<li></li>
+									<li>Docket case schedules and maintain scheduling protocols for 30 attorneys.</li>
+									<li>Provide firm-wide support for scheduling/docketing software.</li>
+									<li>Scan Will and Minute Book library and work with attorneys to establish protocols for future paperless mode of operation.</li>
+									<li>Redesign of firms MS Access, estate planning database.</li>
+									<li>Perform administrative tasks for firm administrator, attorneys, and legal assistants as needed.</li>
 								</ul>
 							</li>
 							<li>
 								<h4>Noisy Neighbor Music - <small><i>6/2010-6/2012</i></small></h4>
 								<h5>Guitar Instructor</h5>
 								<ul class="emp-responsibilities">
-									<li></li>
+									<li>Taught beginner to advanced level guitar to 30-40 students a week.
+									<li>Instruments taught included classical guitar, electric guitar, bass guitar, and ukulele.</li>
 								</ul>
 							</li>
 
@@ -227,7 +284,7 @@
 					</div>
 
 					<div id="presence">
-						<h2>Digital Presence</h2>
+						<h2>Online Presence</h2>
 						<div class="sect-content">
 							<ul>
 								<li><a href="http://www.github.com/mcfun" target="_blank">Github</a></li>
@@ -236,26 +293,9 @@
 								<li><a href="http://www.codepen.io/mcfun" target="_blank">Codepen</a></li>
 							</ul>
 						</div>
-					</div>
+					</div>	
 
-					<div id="volunteer">
-						<div><h2>Volunteer Experience</h2></div>
-						<div>
-							<h4>Computers for the World</h4>
-						</div>
-						<div>
-					
-						</div>
-					</div>
-
-					<div id="professional">
-						<h2>Professional Memberships</h2>
-					</div>
-
-
-					
 				</div>
-
 			</div>
 
 
