@@ -1,7 +1,6 @@
 // cv page dynamics
 
-(function () {
-	'use strict';
+$(document).ready(function() {
 
 	// Since the page title is redundant with the CV header content,
 	// 	we remove the page header so it read's like a print CV
@@ -19,6 +18,8 @@
 	});
 
 	$('.cv-head').fadeIn(3000);
-})();
+	
+});
+
 
 
