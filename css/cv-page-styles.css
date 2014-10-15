@@ -126,10 +126,6 @@ a.anchor {
 
 @media screen and (max-width: 450px) {
 
-	.cv-head * {
-		padding: 0;
-		text-align: center;
-	}
 	.cv-head-title {
 		float: none;
 	}
@@ -147,6 +143,7 @@ a.anchor {
 
 @media screen and (max-width: 980px) {
 	.cv {
-		padding: 0 40px 40px 0;
+		margin: 50px;
+		width: 90%;
 	}
 }

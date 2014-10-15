@@ -228,5 +228,6 @@ p.lead {
 	.main-content {
 		padding-left: 50px;
 		padding-right: 50px;
+		margin: 30px;
 	}
 }
