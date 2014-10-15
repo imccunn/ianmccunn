@@ -129,21 +129,36 @@ a.anchor {
 	.cv-head-title {
 		float: none;
 	}
+	.cv-head-title * {
+		padding: none;
+		text-align: center;
+		display: relative;
+	}
 	.cv-head-contact {
 		float: none;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	#cv-head-email {
 		float: none;
 	}
 
-	.cv {
+	#cv {
 		margin: 0 10px 10px 10px;
+	}
+
+	.pageNavMenu {
+		padding: 0;
+		padding-top: 30px;
+		font-size: 0.8em;
+	}
+	.sect-content {
+		padding-left: 0;
 	}
 }
 
 @media screen and (max-width: 980px) {
-	.cv {
-		margin: 50px;
+	#cv {
 		width: 90%;
 	}
 }
