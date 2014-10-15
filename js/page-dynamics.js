@@ -10,7 +10,7 @@
 		$('#nav').css('position', 'fixed')
 				.css('display', 'block')	
 				.css('padding', '15px')
-				.css('background', '-webkit-linear-gradient(#333, #555)')
+				.css('background', 'rgb(70, 70, 70)')
 				.css('width', '100%')
 				.css('border-bottom', '1px solid #111');
 

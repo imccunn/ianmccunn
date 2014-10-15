@@ -107,7 +107,7 @@ ul.list-inline {
 	text-align: center;
 }
 @media print {
-	.pageNaveMenu {
+	.pageNavMenu {
 		display: none;
 	}
 }
@@ -122,4 +122,31 @@ a.anchor {
 	position: relative; 
 	top: -50px; 
 	visibility: hidden;
+}
+
+@media screen and (max-width: 450px) {
+
+	.cv-head * {
+		padding: 0;
+		text-align: center;
+	}
+	.cv-head-title {
+		float: none;
+	}
+	.cv-head-contact {
+		float: none;
+	}
+	#cv-head-email {
+		float: none;
+	}
+
+	.cv {
+		margin: 0 10px 10px 10px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.cv {
+		padding: 0 40px 40px 0;
+	}
 }

@@ -208,5 +208,25 @@ p.lead {
 	display: block;
 	width: 100%;
 	border-bottom: 1px solid #222;
-	background: -webkit-linear-gradient(#333, #555);
+	background: rgb(70, 70, 70);
+}
+@media screen and (max-width: 360px) {
+	body {
+		font-size: 0.7em;
+	}
+
+	p.lead {
+		font-size: 14px;
+	}
+
+	.nav ul li a {
+		width: 70px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.main-content {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 }
