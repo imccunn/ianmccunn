@@ -66,7 +66,7 @@ var editTask = function() {
 
   var listItem = this.parentNode;
   
-  var editInput = listItem.querySelector("input[type=text");
+  var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   
   var containsClass = listItem.classList.contains("editMode");
