@@ -37,8 +37,8 @@ FakeUser.prototype = {
 	},
 
 	randEmail: function() {
-		var tlds = ['com', 'net', 'org', 'tld', 'rad', 'info'];
-		var dn = ['americaoffline', 'email', 'dankmail', 'gmale', 'example', 'radicalmail', 'snailmail', 'awesome-mail'];
+		var tlds = ['com', 'net', 'org', 'tld', 'edu', 'info', 'gov'];
+		var dn = ['americaoffline', 'email', 'arrakis', 'jupiter', 'example', 'aperature', 'snailmail', 'vega'];
 		var name = ['orange', 'apples', 'banana', 'starfruit', 'grapes', 'tomato', 'coconut', 'strawberry', 'pear', 'pineapple', 'juice'];
 		var addr = name[rIndex(name)] + '@' + dn[rIndex(dn)] + '.' + tlds[rIndex(tlds)];
 		return addr;
