@@ -15,10 +15,11 @@
 }
 
 body {
-	background-color: #333333;
-	color: #fff;
+	background-color: #FCFCFC;
+	color: #000;
 	margin: 0;
-	font-family: 'opensans', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+	font-family: 'opensans', Verdana, sans-serif;
+	
 }
 
 a {
@@ -36,20 +37,22 @@ a:hover {
 }
 
 .page-title {
-	text-align: center;
+	
 	margin-bottom: 25.9px;
 }
 
 .page-title a {
-	color: #fff;
+	color: #111;
+	display: inline-block;
 }
 
-.page-title a h1 {
+.page-title a h2 {
 	letter-spacing: 3px;
 }
 
-.page-title a h3 {
+.page-title a h4 {
 	letter-spacing: 3px;
+	padding-left: 29px;
 }
 
 .all {
@@ -61,7 +64,9 @@ a:hover {
 
 .nav {
 	height: 1.5em;
-	
+	border-bottom: 1px solid #111;
+	clear: both;
+	padding-bottom: 5px;
 }
 
 .nav ul {
@@ -85,7 +90,7 @@ a:hover {
 	height: auto;
 	width: 110px;
 
-	color: #fff;
+	color: #111;
 	text-transform: lowercase;
 	-webkit-transition: color 0.3s;
 }
@@ -132,7 +137,7 @@ a:hover {
 	max-width: 900px;
 	margin: auto;
 	clear: both;
-	padding: 45px;
+	padding: 0 45px 45px 45px;
 }
 
 .footer {
@@ -160,7 +165,6 @@ a:hover {
 .digital-presence ul li a img {
 	max-width: 32px;
 	display: block;
-	border: 1px solid #333;
 }
 
 /*.digital-presence ul li a img:hover {
@@ -171,9 +175,11 @@ a:hover {
 /* Index Page Styles */
 
 p.lead {
+	padding-top: 10px;
 	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
+	font-size: 18px;
+	max-width: 600px;
+	margin: auto;
 }
 
 
@@ -208,7 +214,7 @@ p.lead {
 	display: block;
 	width: 100%;
 	border-bottom: 1px solid #222;
-	background: rgb(70, 70, 70);
+	background-color: #FCFCFC;
 }
 @media screen and (max-width: 360px) {
 	body {
@@ -230,4 +236,11 @@ p.lead {
 		padding-right: 50px;
 		margin: 30px;
 	}
+}
+
+.cv-head-contact {
+	float: right; 
+	list-style-type: none; 
+	margin-top: 22px; 
+	height: auto;
 }
