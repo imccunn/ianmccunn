@@ -35,8 +35,12 @@ button {
 	color: #fff;
 }
 
-#header a:visited {
-	color: #fff;
+#header a:hover {
+	color: #9656DB;
+}
+
+#header h1 {
+	display: inline-block;
 }
 
 #nav li {
@@ -133,6 +137,10 @@ button {
 	float: left;
 }
 
+.view-user h2 {
+	margin-top: 0;
+}
+
 .edit-user-panel {
 	float: right;
 	margin-top: 20px;
@@ -177,6 +185,10 @@ button {
 }
 
 #home {
-	float: left;
+	float: right;
 	color: #ff7700;
+}
+#home:hover {
+	color: #ff7700;
+	text-decoration: underline;
 }
