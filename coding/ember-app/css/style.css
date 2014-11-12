@@ -1,0 +1,177 @@
+/* Put your CSS here */
+.ember-application {
+    margin: 20px;
+    max-width: 900px;
+    margin: auto;
+    color: #fff;
+    background-color: #000;
+}
+
+a {
+	color: #9656DB;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	margin: 10px;
+}
+
+#all {
+	margin: ;
+}
+#header {
+	background-color: #444;
+	border: 1px solid #333;
+	padding: 20px;
+}
+
+#header a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#header a:visited {
+	color: #fff;
+}
+
+#nav li {
+	display: inline;
+}
+
+#nav li a {
+	text-decoration: underline;
+}
+
+#nav li a:hover {
+	text-decoration: underline;	
+}
+
+#user-data {
+	margin: 5px;
+	border: 1px solid #fff;
+}
+
+#user-data thead {
+	text-align: left;
+	padding: 10px;
+}
+
+#user-data th {
+	padding: 10px;
+}
+
+#user-data td {
+	min-width: 150px;
+	padding: 4px 10px;
+	border: 1px solid #fff;
+}
+
+.user-row:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+#create-user {
+	margin: 20px 0 0 20px;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	text-decoration: none;
+	clear: both;
+}
+
+#create-user:hover {
+	background-color: #9656DB;
+	color: #fff;
+	text-decoration: underline;
+}
+
+#errors {
+	display: none;
+	color:#ff5500;
+}
+
+#invalid-email {
+	display: none;
+	color: #ff5500;
+}
+#first-required {
+	display: none;
+	color: #ff5500;
+}
+
+.user-panel {
+	padding: 22px;
+	background-color: #ddd;
+	border: 1px solid #444;
+}
+
+.edit-link {
+	padding: 10px 20px;
+	border: 1px solid #000;
+	background-color: #ff7700;
+	color: #000;
+	text-decoration: none;
+}
+
+.edit-link:hover {
+	text-decoration: underline;
+	background-color: #ff2200;
+}
+
+.panel {
+	padding: 20px 40px;
+}
+
+.view-user {
+	float: left;
+}
+
+.edit-user-panel {
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px 29px;
+	background-color: #aaa;
+	color: #000;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	min-width: 400px;
+
+}
+
+.table-format {
+
+}
+
+.table-format td {
+	width: 50px;
+	padding: 10px;
+}
+
+.table-format input {
+	padding: 0 5px;
+	margin: 10px 0 5px 30px;
+	line-height: 23px;
+	border-radius: 5px;
+}
+
+.border {
+	border: 1px solid #fff;
+}
+
+.remove-user-btn {
+	background-color: #FAAFAF;
+}
+
+.footer {
+	margin-top: 20px;
+	height: 200px; 
+	clear: both;
+}

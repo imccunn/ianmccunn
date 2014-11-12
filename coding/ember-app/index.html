@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A basic SPA with emberJS.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EmberJS SPA</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ 
+  <script type="text/x-handlebars">
+    <div id='header'>
+      {{#link-to 'index'}}<h1>User Database</h1>{{/link-to}}
+      <ul id='nav'>
+          <li>{{#link-to 'info'}}Info{{/link-to}}</li>
+          <li>{{#link-to 'users'}}Users{{/link-to}}</li>
+      </ul>
+    </div>
+
+    {{outlet}}
+    <div class="footer">
+      <hr>
+    </div>
+  </script>  
+
+  <script type="text/x-handlebars" id="index">
+    <p>The index route. have a nice day.</p>
+
+  </script>
+  <script type="text/x-handlebars" id="info">
+    <div class="panel">
+
+      <h2>Info</h2>
+      <p>A small little SPA with emberJS.</p>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="users">
+
+    <div class="panel">
+      <h2>All Users</h2>
+      <table id="user-data">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each user in model}}
+            <tr class='user-row'>
+              <td>{{user.firstName}}</td>
+              <td>{{user.lastName}}</td>
+              <td>{{user.email}}</td>
+              <td>{{#link-to 'user' this.user}}View{{/link-to}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{#link-to 'createUser' id="create-user"}}Create New User{{/link-to}}
+    </div>
+      {{outlet}}
+    
+  </script>
+
+  <script type="text/x-handlebars" id="user">
+    <div class="panel view-user">
+      <h2>{{firstName}} {{lastName}}</h2>
+      <ul>
+        <li><strong>id:</strong> {{id}}</li>
+        <li><strong>First Name:</strong> {{firstName}}</li>
+        <li><strong>Last Name:</strong> {{lastName}}</li>
+        <li><strong>Email:</strong> {{email}}</li>
+      </ul>
+
+      {{#link-to 'editUser' this}}Edit User{{/link-to}}
+    </div>
+      {{outlet}}
+      
+    
+  </script>
+
+  <script type="text/x-handlebars" id="createUser">
+    <div class="panel border">
+
+      <h3>Create New User</h3>
+      <ul>
+        <li>First name: {{newFirst}}</li>
+        <li>Last name: {{newLast}}</li>
+        <li>Email: {{newEmail}}</li>
+      </ul>
+
+      <table class="table-format">
+        <tbody>
+          <tr>
+            <td>
+              <label>
+                <strong>First Name:</strong> {{input type='text' value=newFirst}}
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                <strong>Last Name:</strong> {{input type='text' value=newLast}}
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                <strong>Email:</strong> {{input type='text' value=newEmail}}
+                <div id="errors">
+
+                </div>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <button {{action 'createUser'}}>Done</button>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="editUser">
+    <div class="edit-user-panel">
+
+      <h3>Edit User: {{model.firstName}} {{model.lastName}}</h3>
+
+      <table class="table-format">
+        <tbody>
+          <tr>
+            <td>
+              <label>
+                <strong>First Name:</strong> {{input type='text' value=model.firstName}}
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                <strong>Last Name:</strong> {{input type='text' value=model.lastName}}
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                <strong>Email:</strong> {{input type='text' value=model.email}}
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="errors">
+
+      </div>
+      <button {{action 'done' this}}>Done</button>
+      <button class="remove-user-btn" {{action 'remove' this }}>Remove</button>
+    </div>
+  </script>
+
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/handlebars-1.1.2.js"></script>
+  <script src="js/libs/ember-1.7.0.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>
+</body>
+</html>
