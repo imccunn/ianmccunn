@@ -1,5 +1,5 @@
 /**
- *     Admin Control Panel App using Ember JS
+ *     User Database demo using Ember JS
  *     
  *     By Ian D. McCunn, @ianmccunn
  */

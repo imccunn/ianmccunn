@@ -175,3 +175,8 @@ button {
 	height: 200px; 
 	clear: both;
 }
+
+#home {
+	float: left;
+	color: #ff7700;
+}
