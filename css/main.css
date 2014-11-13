@@ -179,7 +179,7 @@ a:hover {
 /* Index Page Styles */
 
 p.lead {
-	padding-top: 10px;
+	padding-top: 30px;
 	text-align: center;
 	font-size: 18px;
 	max-width: 600px;
@@ -224,13 +224,14 @@ p.lead {
 .nav-sticky ul li:last-child {
 	font-size: 10px;
 	display: block;
-
 }
 
 .nav-sticky ul li:last-child a {
-
 	width: 200px;
+}
 
+.nav-sticky li .nav-email:hover {
+	color: #00ff00;
 }
 
 .nav-sticky li .nav-email:hover:before {
