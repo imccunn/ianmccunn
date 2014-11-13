@@ -55,8 +55,8 @@ button.delete:hover {
 }
 
 button.edit:hover {
-  background-color: #fff;
-  color: #333;
+  background-color: #222;
+  color: #000;
 }
 
 button#purge {
