@@ -88,11 +88,15 @@ a:hover {
 
 	display: block;
 	height: auto;
-	width: 110px;
+	min-width: 110px;
 
 	color: #111;
 	text-transform: lowercase;
 	-webkit-transition: color 0.3s;
+}
+
+.nav ul li:last-child {
+	display: none;
 }
 
 .nav a:hover {
@@ -216,6 +220,27 @@ p.lead {
 	border-bottom: 1px solid #222;
 	background-color: #FCFCFC;
 }
+
+.nav-sticky ul li:last-child {
+	font-size: 10px;
+	display: block;
+
+}
+
+.nav-sticky ul li:last-child a {
+
+	width: 200px;
+
+}
+
+.nav-sticky li .nav-email:hover:before {
+	content: "";
+}
+
+.nav-sticky li .nav-email:hover:after {
+	content: "";
+}
+
 @media screen and (max-width: 360px) {
 	body {
 		font-size: 0.7em;

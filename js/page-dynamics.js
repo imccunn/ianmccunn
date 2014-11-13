@@ -19,7 +19,6 @@
 
 	$('.cv-head').fadeIn(2000);
 
-
 	// affix nav menu if scrolled past its Y location
 	var menu = $('.nav');
 	var origOffsetY = menu.offset().top;
@@ -30,7 +29,6 @@
 
 	    } else {
 	        $('.nav').removeClass('nav-sticky');
-
 	    }
     }
     
