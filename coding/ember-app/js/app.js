@@ -25,7 +25,7 @@ FakeUser.prototype = {
 	},
 
 	randFirst: function() {
-		var firstNames = ['Bob', 'Jill', 'Jane', 'Gerald', 'Richard', 'Harry', 'Samantha', 'Cindy', 'Barb', 'Mary'];
+		var firstNames = ['Bob', 'Jill', 'Jane', 'Gerald', 'Richard', 'Harry', 'Samantha', 'Cindy', 'Barb', 'Mary', 'Tim', 'Harry', 'John'];
 		var name = firstNames[rIndex(firstNames)];
 		return name;
 	},
