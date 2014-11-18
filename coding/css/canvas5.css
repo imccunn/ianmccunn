@@ -1,3 +1,14 @@
+
+button {
+  margin: 5px;
+  color: #000;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .controlPanel {
   position: relative;
   border: 1px solid #fff;
@@ -22,7 +33,7 @@
 
 .textButton a {
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   padding: 3px;
 }
 
@@ -40,7 +51,11 @@
 
 #setAmpFreq {
   cursor: pointer;
+
+  border: 1px solid #000;
 }
 #smooth {
   cursor: pointer;
+
+  border: 1px solid #000;
 }
