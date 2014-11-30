@@ -241,7 +241,15 @@ p.lead {
 	content: "";
 }
 
-@media screen and (max-width: 360px) {
+.head-contact {
+	float: right; 
+	list-style-type: none; 
+	margin-top: 22px; 
+	height: auto;
+}
+
+@media (max-width: 360px) {
+
 	body {
 		font-size: 0.7em;
 	}
@@ -251,11 +259,35 @@ p.lead {
 	}
 
 	.nav ul li a {
-		width: 70px;
+		width: auto;
+	}
+
+	.nav ul li {
+		width: auto;
+	}
+
+	.main-content {
+		padding: 20px;
+	}
+
+	.head-contact {
+		float: none;
+		clear: both;
+		text-align: center;
+		padding: 0;
+	}
+
+	.page-title {
+		float: none;
+		text-align: center;
+	}
+
+	.page-title a h4 {
+		padding: 0;
 	}
 }
 
-@media screen and (max-width: 980px) {
+@media (min-width: 980px) {
 	.main-content {
 		padding-left: 50px;
 		padding-right: 50px;
@@ -263,9 +295,3 @@ p.lead {
 	}
 }
 
-.cv-head-contact {
-	float: right; 
-	list-style-type: none; 
-	margin-top: 22px; 
-	height: auto;
-}
