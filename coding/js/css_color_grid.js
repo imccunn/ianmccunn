@@ -332,7 +332,6 @@
 	}
 
 	function applyPreset(){
-		console.log('applyPreset()');
 		var radioPresets = document.forms['controlForm'].elements['preset'];
 		var preset = {};
 		for (var i = 0; i < radioPresets.length; i++){
@@ -411,6 +410,9 @@
 		content.innerHTML = ' ';
 		animSheet.innerHTML = ' ';
 
+		var attachDiv = document.createElement('div');
+		//var clrGridDOMChunk;
+
 		// Construct div blocks, their styles, and animations
 		for (var i = 0; i < blocks.length; i++){
 
@@ -436,24 +438,28 @@
 			blocks[i].style.marginTop = '0';
 			//blocks[i].style.border = '0px solid #000';
 			blocks[i].style.borderRadius = borderRad + 'px';
+
+			// Animation
 			blocks[i].style.webkitAnimation = 'anim' + i + ' ' + animTime + 's';
+
 			blocks[i].style.webkitAnimationIterationCount = 'infinite';
 			blocks[i].style.webkitAnimationDirection = 'alternate';
+
 			blocks[i].style.mozWebkitAnimation = 'anim' + i + ' ' + animTime + 's';
+
 			blocks[i].style.mozWebkitAnimationIterationCount = 'infinite';
 			blocks[i].style.mozWebkitAnimationDirection = 'alternate';
 
-			//Update DOM with created markup
-			content.appendChild(blocks[i]);
-
+			// Construct Virtual DOM
+			attachDiv.appendChild(blocks[i]);
 		}
-				
+
+		//Append Virtual DOM to DOM
+		content.appendChild(attachDiv);		
 	}
 
 	init();
 
-	// return {
-	// 	updateDOM : updateDOM
-	// };
+	 return;
 
 })();

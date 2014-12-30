@@ -36,6 +36,21 @@
 
 #deltaColorGrid {
   margin-bottom: 29.5px;
+
+}
+
+#deltaColorGrid  div  div {
+  display: inline-block;
+/*  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
+/*  -webkit-animation-play-state: running;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;*/
+/*  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;*/
+
 }
 
 #updateGrid {
