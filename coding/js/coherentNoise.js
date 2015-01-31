@@ -1,5 +1,5 @@
 // ****************************************
-// 1d Perlin Noise Generator
+// 1d Coherant Noise Generator
 // 
 // Description: This generates '1 dimensional' perlin noise
 // 	for the purposes of example and education.
