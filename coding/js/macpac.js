@@ -75,7 +75,7 @@
 		else if (document.getElementById('fingerStyle').checked){
 			rightHandData = ['p', 'i', 'm', 'a', 'c'];
 			if (document.getElementById('noPinky').checked){
-				rightHandData = ['p', 'i', 'm', 'a',];
+				rightHandData = ['p', 'i', 'm', 'a'];
 			}
 		}
 
