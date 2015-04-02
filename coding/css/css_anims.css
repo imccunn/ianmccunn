@@ -17,8 +17,8 @@
 
 #controls {
   margin: 0 auto;
-  padding: 10px; 
-  border: 1px solid #000; 
+  padding: 10px;
+  border: 1px solid #000;
   background-color: rgba(255,255,255, 0.2);
   max-width: 400px;
 }
@@ -57,6 +57,8 @@
   position: relative;
   padding: 20px 40px;
   margin: 20px 0;
+  color: #000;
+  border: 1px solid #000;
 }
 
 .updateGridHolder {
