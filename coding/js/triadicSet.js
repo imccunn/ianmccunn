@@ -1,7 +1,7 @@
 
 
 (function(){
-	
+
 	//constants
 	var chordMember = {
 		root: 0,
@@ -12,6 +12,7 @@
 		sixth: 9,
 		seventh: 11
 	};
+
 	var pitchModifier = {
 		'bb': -2,
 		'b': -1,
@@ -24,7 +25,6 @@
 
 	};
 
-
 	function PitchClass(pitch){
 		this.pitch = pitch || -1;
 
@@ -34,7 +34,7 @@
 
 	}
 	function Chord(cname){
-		
+
 		this.cname = cname;
 		this.pcset = [0,4,7];
 		this.quality = quality;
@@ -47,9 +47,9 @@
 
 			//Format includes slash notation
 			var rxResult = chordRex.exec(this.cname);
-			
+
 			if(!chordRex.test(this.cname)){
-				
+
 				return console.log("Incorrect Chord Format to determine set.");
 
 			}else{
@@ -66,7 +66,7 @@
 					}
 				}
 				//Process number following root PC (C9, C7)
-				
+
 				return;
 
 			}
@@ -81,10 +81,10 @@
 		var mod = modifier;
 
 		switch (mod){
-			case '#' : 
+			case '#' :
 		}
 	}
-	
+
 	// ***************************
 	// translateChordalModifiers()
 	//
@@ -125,16 +125,16 @@
 
 		console.log(re.test(mainChord));
 		var rxResult = re.exec(mainChord);
-	
+
 		if(!re.test(mainChord)){
-			
+
 			document.getElementById('triadSetResult').innerHTML = "<span style=\"color: red;\">Incorrect format.</span>";
 
 		}else{
 			console.log("truth reached");
 			document.getElementById('triadSetResult').innerHTML = "";
 			for (var i = 0; i < rxResult.length; i++){
-				
+
 				document.getElementById('triadSetResult').innerHTML += "<p>" + (i+1) + ". " + rxResult[i] + "</p>";
 			}
 

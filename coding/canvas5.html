@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 
 <html lang='en'>
-  
+
   <head>
-    
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
     <meta name='description' content='Web developer and programmer.'>
     <meta name='author' content='Ian D. McCunn'>
 
-    
     <link rel='icon'  href='../img/object.ico'>
-    <link rel='stylesheet' type='text/css' href='css/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='../css/normalize.css'>
     <link rel='stylesheet' type='text/css' href='../css/main.css'>
     <link rel='stylesheet' type='text/css' href='css/code_general.css'>
     <link rel="stylesheet" type="text/css" href="css/canvas5.css">
 
-    <title>Ian McCunn - Code</title>
+    <title>Ian McCunn - Coherent Noise</title>
     <style type="text/css">
-
-
 
     </style>
   </head>
@@ -44,7 +41,7 @@
               <li><a href="../work.html">Work</a></li>
               <li><a href="./blog">Blog</a></li>
               <li><a href="mailto:ianmccunn@gmail.com" class="nav-email"title="Send Email to Ian (mailto)">ian.mccunn@gmail.com</a></li>
-              
+
             </ul>
           </div>
         </div>
@@ -52,7 +49,7 @@
 
         <!-- MAIN PAGE CONTENT______________________________________________-->
 
-      
+
         <h2>One-dimensional coherent noise</h2>
         <div>
 
@@ -63,7 +60,7 @@
           <div class='controlPanel'>
 
 <!--             <input type='checkbox' id='togOct'>
-            
+
             <div class='octaveSelect'>
               <input type='checkbox' id='o1'>
               <input type='checkbox' id='o2'>
@@ -74,7 +71,7 @@
               <input type='checkbox' id='o7'>
               <input type='checkbox' id='o8'>
               <input type='checkbox' id='o9'>
-              <input type='checkbox' id='o10'>                        
+              <input type='checkbox' id='o10'>
             </div>
 
             <div id='cosPoints'>
@@ -89,15 +86,15 @@
               <input type='checkbox' id='c7' checked>
               <input type='checkbox' id='c8' checked>
               <input type='checkbox' id='c9' checked>
-              <input type='checkbox' id='c10' checked>                   
+              <input type='checkbox' id='c10' checked>
             </div> -->
             <labl for="oct">Octaves:</label><input disabled type='text' id='oct' value='8' size='2'>
             Persistence: <input type='text' id='persist' value='1' size='2'><br>
-            <button id="setAmpFreq">Generate Noise</button> 
+            <button id="setAmpFreq">Generate Noise</button>
             <button id="smooth">Smooth</button><input type='text' id='smoothFactor' value='50' size='4'><br>
-          </div>  
+          </div>
 
-          
+
         </div>
 
       </div>
@@ -120,12 +117,13 @@
 
     </div>
 
-    <!-- JS 
+    <!-- JS
     ===============================================-->
     <!-- <script type='text/javascript' src='js/general.js'></script>-->
+    <script type="text/javascript" src="../js/vendor/jquery-1.11.1.min.js"></script>
     <script src='js/coherentNoise.js'></script>
     <script type="text/javascript" src="../js/page-dynamics.js"></script>
-    
+
     <!-- Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
