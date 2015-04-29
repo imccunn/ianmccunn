@@ -1,9 +1,3 @@
-/** {
-  border: 1px solid #fff;
-}
-*/
-
-
 @font-face {
   font-family: 'alegreya';
   src: url('../fonts/AlegreyaSansSC/AlegreyaSansSC-Regular.ttf');
@@ -24,7 +18,6 @@ body {
   color: #000;
   margin: 0;
   font-family: 'lato', Verdana, sans-serif;
-  
 }
 
 a {
@@ -133,7 +126,6 @@ a:hover {
   content: "{ ";
   color: #249100;
   font-weight: bold;
-
 }
 
 .selected-nav:after {
@@ -172,15 +164,11 @@ a:hover {
   padding: 5px;
 
 }
+
 .digital-presence ul li a img {
   max-width: 32px;
   display: block;
 }
-
-/*.digital-presence ul li a img:hover {
-  border: 1px solid #fff;
-}*/
-
 
 /* Index Page Styles */
 
@@ -199,7 +187,6 @@ p.lead {
 .index-content h3 {
   
 }
-
 
 /* Code Page - code.html */
 
@@ -254,6 +241,12 @@ p.lead {
   height: auto;
 }
 
+/* Projects Page Styles */
+.workContent {
+  padding-left: 25px;
+}
+
+/****** Responsive ******/
 @media (max-width: 360px) {
 
   body {
