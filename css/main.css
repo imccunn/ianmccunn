@@ -246,6 +246,23 @@ p.lead {
   padding-left: 25px;
 }
 
+.workContent a span {
+  margin-left: 7px;
+}
+
+.deployAppLink {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.sourceLink {
+  display: block;
+}
+
+.sourceLink span {
+
+}
+
 /****** Responsive ******/
 @media (max-width: 360px) {
 
