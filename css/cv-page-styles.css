@@ -92,6 +92,10 @@ a.anchor {
 	visibility: hidden;
 }
 
+.employment ul li h5 {
+	padding-left: 15px;
+}
+
 @media screen and (max-width: 450px) {
 
 	.cv-head-title {
