@@ -62,7 +62,7 @@ a:hover {
 
 .nav {
   height: 1.5em;
-  border-bottom: 1px solid #111;
+  border-bottom: 0px solid #111;
   clear: both;
   padding-bottom: 5px;
 }
@@ -116,6 +116,30 @@ a:hover {
 
 .nav a:active:after {
   content: " }";
+}
+
+.hrA1 {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.vec {
+  height: 1px;
+  width: 2px;
+  float: left;
+  position: relative;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  -webkit-animation: neatMove 8s infinite;
+  animation: neatMove 8s infinite;
+}
+
+@-webkit-keyframes neatMove {
+  0% {left: 0%; }
+  100% {left: 100%;}
 }
 
 .selected-nav {
