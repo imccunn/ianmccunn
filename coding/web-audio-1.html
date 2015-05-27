@@ -9,21 +9,13 @@
     <meta name="description" content="Web developer and programmer.">
     <meta name="author" content="Ian D. McCunn">
 
+
     <link rel="icon"  href="../img/object.ico">
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel='stylesheet' type='text/css' href='../css/normalize.css'>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/code_general.css">
 
-    <title>Ian McCunn - Canvas Project 2</title>
-
-    <style type="text/css">
-      .textCenter {
-        text-align: center;
-      }
-      #c {
-        margin-top: 20px;
-        width: 100%;
-      }
-    </style>
+    <title>Ian McCunn - Path/Dungeon Generator</title>
 
   </head>
 
@@ -49,43 +41,40 @@
               <li><a href="mailto:ianmccunn@gmail.com" class="nav-email"title="Send Email to Ian (mailto)">ian.mccunn@gmail.com</a></li>
             </ul>
           </div>
-          <div class="hrA1"> 
-            <div class="vec"></div>
+        </div>
+
+        <!-- MAIN, PAGE CONTENT______________________________________________-->
+        <div class="center">
+          <
+          <button id='makeChord'>Play Chord</button>
+        </div>  
+
+        <!--END MAIN PAGE CONTENT____________________________________________-->
+
+        <div class="footer">
+
+          <div class="digital-presence">
+            <ul>
+              <li><a href="https://coderbits.com/mcfun" target="_blank" title="Ian's Coderbits Profile"><img src="../img/digPres/CoderbitsFaceCircleBW.png" alt="Coderbits Logo"></a></li>
+              <li><a href="https://github.com/mcfun" target="_blank" title="Ian's Github Profile"><img src="../img/digPres/GitHub-Mark-Light-64px.png" alt="Github Logo"></a></li>
+              <li><a href="http://codepen.io/mcfun/" target="_blank" title="Ian's CodePen Profile"><img src="../img/digPres/CP-Button-white-Large.png" alt="CodePen Logo"></a></li>
+              <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank" title="Ian's LinkedIn Profile"><img src="../img/digPres/LinkedIn-InBug-2C.png" alt="LinkedIn Logo"></a></li>
+            </ul>
+          </div>
+
+          <div class='copyright'>
+            <p>Ian D. McCunn © 2015</p>
           </div>
         </div>
 
-
-
-        <div class="textCenter">
-          <canvas id='c'></canvas>
-          <script src='js/canvas2.js'></script>
-        </div>
-
       </div>
-      <!--END MAIN PAGE CONTENT____________________________________________-->
-
-      <div class="footer">
-        <div class="digital-presence">
-          <ul>
-            <li><a href="https://coderbits.com/mcfun" target="_blank" title="Ian's Coderbits Profile"><img src="../img/digPres/CoderbitsFaceCircleBW.png" alt="Coderbits Logo"></a></li>
-            <li><a href="https://github.com/mcfun" target="_blank" title="Ian's Github Profile"><img src="../img/digPres/GitHub-Mark-Light-64px.png" alt="Github Logo"></a></li>
-            <li><a href="http://codepen.io/mcfun/" target="_blank" title="Ian's CodePen Profile"><img src="../img/digPres/CP-Button-white-Large.png" alt="CodePen Logo"></a></li>
-            <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank" title="Ian's LinkedIn Profile"><img src="../img/digPres/LinkedIn-InBug-2C.png" alt="LinkedIn Logo"></a></li>
-          </ul>
-        </div>
-
-        <div class='copyright'>
-          <p>Ian D. McCunn © 2015</p>
-        </div>
-      </div>
-
-    </div>
 
     <!-- JS
     ===============================================-->
     <!-- <script type='text/javascript' src='js/general.js'></script>-->
     <script type="text/javascript" src="../js/vendor/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../js/page-dynamics.js"></script>
+    <script type="text/javascript" src="js/webAudioChord.js"></script>
 
     <!-- Analytics -->
     <script>
@@ -96,7 +85,6 @@
 
       ga('create', 'UA-55319861-1', 'auto');
       ga('send', 'pageview');
-
     </script>
 
   </body>
