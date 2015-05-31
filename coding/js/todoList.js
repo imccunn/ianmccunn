@@ -10,6 +10,9 @@ var completedTitle = document.getElementById("completed-title");
 
 var noIncompleteTasks = "<li class='tasks-complete'>Tasks Complete!</li>";
 
+taskInput.focus();
+taskInput.setAttribute('placeholder', 'Enter new task...');
+
 //New Task List Item
 var createNewTaskElement = function(taskString) {
   //Create List Item
@@ -199,40 +202,9 @@ taskInput.addEventListener("keyup", function(e) {
   //console.log(e);
   if (e.keyCode === 13){
     addTask();
-    this.value = 'Enter new task...';
+    this.value = '';
+    this.setAttribute('placeholder', 'Enter new task...');
     this.select();
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
