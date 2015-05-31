@@ -54,7 +54,6 @@ var createNewTaskElement = function(taskString) {
 //Add a new task
 var addTask = function() {
   checkForEmptyTodo();
-  console.log("Add task...");
   //Create a new list item with the text from #new-task:
   var listItem = createNewTaskElement(taskInput.value);
   //Append listItem to incompleteTasksHolder
@@ -65,7 +64,6 @@ var addTask = function() {
 
 //Edit an existing task
 var editTask = function() {
-  console.log("Edit task...");
 
   var listItem = this.parentNode;
   
@@ -92,7 +90,6 @@ var editTask = function() {
 
 //Delete an existing task
 var deleteTask = function() {
-  console.log("Delete task...");
   var listItem = this.parentNode;
   var ul = listItem.parentNode;
   
@@ -103,7 +100,6 @@ var deleteTask = function() {
 
 //Mark a task as complete
 var taskCompleted = function() {
-  console.log("Task complete...");
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
@@ -123,20 +119,17 @@ var checkForEmptyTodo = function() {
 
 var checkForEmptyCompleted = function() {
   if (completedTasksHolder.childElementCount === 0) {
-    console.log("Completed is empty.");
     purgeButton.style.visibility = "hidden";
     completedTitle.style.visibility = "hidden";
   } else {
     purgeButton.style.visibility = "visible";
     completedTitle.style.visibility = "visible";
-    console.log("Completed is not empty.")
 
   }
 }
 
 //Mark a task as incomplete
 var taskIncomplete = function() {
-  console.log("Task incomplete...");
   checkForEmptyTodo();
   //Append the task list item to the #incomplete-tasks
   var listItem = this.parentNode;
@@ -149,7 +142,6 @@ var purgeCompletedTasks = function() {
   if (completedTasksHolder.childElementCount === 0){
     return;
   } else if (confirm("Are you sure you want to purge your completed tasks list?")){
-        console.log("Completed Tasks Purged");
 
         while (completedTasksHolder.firstChild) {
           completedTasksHolder.removeChild(completedTasksHolder.firstChild);
@@ -163,7 +155,6 @@ var purgeCompletedTasks = function() {
 }
 
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
-  console.log("Bind list item events");
   //select taskListItem's children
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector("button.edit");
@@ -199,7 +190,6 @@ purgeButton.onclick = purgeCompletedTasks;
 
 //bind keyup 'Enter' to task Input
 taskInput.addEventListener("keyup", function(e) {
-  //console.log(e);
   if (e.keyCode === 13){
     addTask();
     this.value = '';
