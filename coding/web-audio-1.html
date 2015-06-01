@@ -14,8 +14,49 @@
     <link rel='stylesheet' type='text/css' href='../css/normalize.css'>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="css/code_general.css">
+    <style type="text/css">
+      #description {
+        text-align: left;
+      }
 
-    <title>Ian McCunn - Path/Dungeon Generator</title>
+      #vcontainer {
+        padding: 5px;
+      }
+
+      #v {
+        display: block;
+      }
+
+      #ctrlContainer {
+        float: left;
+        text-align: left;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+
+      #frequencies {
+        display: inline;
+        float: left;
+      }
+
+      #controls {
+      }
+
+      #controls tr td {
+        text-align: left;
+        padding: 5px 10px 10px 2px;
+      }
+
+      #freqDisplay {
+        margin: 5px;
+        padding: 10px;
+        float: left;
+        border: 1px solid #000;
+      }
+
+    </style>
+
+    <title>Ian McCunn - Web Audio Chords</title>
 
   </head>
 
@@ -41,12 +82,52 @@
               <li><a href="mailto:ianmccunn@gmail.com" class="nav-email"title="Send Email to Ian (mailto)">ian.mccunn@gmail.com</a></li>
             </ul>
           </div>
+          <div class="hrA1"> 
+            <div class="vec"></div>
+          </div>
         </div>
 
         <!-- MAIN, PAGE CONTENT______________________________________________-->
-        <div class="center">
-          <
-          <button id='makeChord'>Play Chord</button>
+        <div >
+          <section id="description">
+            <h3>Web Audio API 1</h3>
+            <h4>Synthesizing Chords of Random non-tempered Frequencies</h4>
+            <p>This small proof of concept allows you to use Web Audio API oscillators to generate a chord of n pitches within a range of frequencies.</p>
+            <p>In this case, a 'chord' is simply meant here to be a collection of frequencies played temporally in sync. Select the number of pitches you want to generate, the minimum and maximum possible requencies and the duration. Hit 'Play Chord' to hear the procedurally generated chord. A slight ADSR envelope is applied to each frequency in a random fashion (both for interest and smooth attack and release).</p>
+          </section>
+          <div id="vcontainer">
+            <canvas id="v"></canvas>
+          </div>
+          <div id="ctrlContainer">
+            <table id="controls">
+              <tr>
+                <td><label for="numPitches">Number of Pitches (int) [2 - 50]</label></td>
+                <td><input id="numPitches" type="number" min="2" max="50" value="5"></td>
+              </tr>
+              <tr>
+                <td><label for="fMax">Frequency Max (Hz) [30 - 15000]</label></td>
+                <td><input id="fMax" type="number" min="30" max="15000" value="1200"></td>
+              </tr>
+              <tr>
+                <td><label for="fMin">Frequency Min (Hz) [30 - 15000]</label></td>
+                <td><input id="fMin" type="number" min="30" max="15000" value="200"></td>
+              </tr>
+              <tr>
+                <td><label for="duration">Duration (seconds) [0.2 - 10]</label></td>
+                <td><input id="duration" type="number" min="0.02" max="10" value="1"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><button id='makeChord'>Play Chord</button></td>
+              </tr>
+            </table>
+          </div>
+          <div id="freqDisplay">
+            <p>Generated Frequencies</p>
+            <ul id="frequencies">
+              
+            </ul>
+          </div>
         </div>  
 
         <!--END MAIN PAGE CONTENT____________________________________________-->
@@ -75,6 +156,8 @@
     <script type="text/javascript" src="../js/vendor/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../js/page-dynamics.js"></script>
     <script type="text/javascript" src="js/webAudioChord.js"></script>
+    <script type="text/javascript">
+    </script>
 
     <!-- Analytics -->
     <script>
@@ -86,7 +169,7 @@
       ga('create', 'UA-55319861-1', 'auto');
       ga('send', 'pageview');
     </script>
-
+    <img src="img/waVis.png" style="display: none;">
   </body>
 
 </html>
