@@ -149,7 +149,7 @@
 		dispFreqs.sort(function(a, b) {
 			return a - b;	
 		});
-		for (var i = dispFreqs.length-1; i > 0; i--) {
+		for (var i = dispFreqs.length-1; i >= 0; i--) {
 			var li = document.createElement('li');
 			li.innerHTML = dispFreqs[i];
 			freqContainer.appendChild(li);
