@@ -199,10 +199,15 @@ a:hover {
 
 p.lead {
   padding-top: 30px;
-  text-align: center;
-  font-size: 18px;
+  padding-right: 1.5em;
+  text-align: left;
+  font-size: 1.1em;
   max-width: 600px;
   margin: auto;
+}
+
+.index-content {
+  margin-top: 1.2em;
 }
 
 .index-content p {
@@ -353,4 +358,21 @@ p.lead {
   .head-contact {
     float: none;
   }
+}
+
+#twitTime {
+  float: right;
+}
+
+.twitter-timeline {
+  float: left;
+}
+
+#twitter-widget-0 {
+  width: 300px;
+}
+
+.col-md {
+  float: left;
+  width: 66.666666%;
 }
