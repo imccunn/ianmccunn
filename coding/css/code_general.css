@@ -47,7 +47,7 @@ margin: 0 0 50px 0;
 }
 
 .wrapLinkProj {
-  color: #249100;
+  color: #FF7300;
 }
 .wrapLinkProj::after {
   content:  ' \00BB';
