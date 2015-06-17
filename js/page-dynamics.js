@@ -10,9 +10,9 @@
 		$('#nav').css('position', 'fixed')
 				.css('display', 'block')	
 				.css('padding', '15px')
-				.css('background', 'rgb(2, 2, 2)')
+				.css('background', 'rgb(220, 220, 220)')
 				.css('width', '100%')
-				.css('border-bottom', '1px solid #222');
+				.css('border-bottom', '1px solid #fcfcfc');
 
 		$('.cv').css('margin-top', '40px');
 	});

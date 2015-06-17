@@ -14,8 +14,8 @@
 }
 
 body {
-  background-color: #222;
-  color: #FCFCFC;
+  background-color: #fcfcfc;
+  color: #222;
   margin: 0;
   font-family: 'lato', Verdana, sans-serif;
 }
@@ -40,7 +40,7 @@ a:hover {
 }
 
 .page-title a {
-  color: #FCFCFC;
+  color: #111;
   display: inline-block;
 }
 
@@ -87,7 +87,7 @@ a:hover {
   height: auto;
   min-width: 100px;
 
-  color: #fcfcfc;
+  color: #222;
   text-transform: lowercase;
   -webkit-transition: color 0.3s;
 }
@@ -239,8 +239,8 @@ p.lead {
   left: 0;
   display: block;
   width: 100%;
-  border-bottom: 1px solid #fcfcfc;
-  background-color: #222;
+  border-bottom: 1px solid #222;
+  background-color: #fcfcfc;
 }
 
 .nav-sticky ul li:last-child {
