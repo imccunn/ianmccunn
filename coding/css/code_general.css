@@ -14,13 +14,22 @@ button:hover {
 }
 
 .codeHeader {
-margin: 0 0 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .code-project-list {
   line-height: 1.8em;
 }
 
+.code-project-list li {
+  list-style-type: none;
+}
+
+.code-project-list li p {
+  font-style: italic;
+  color: #999;
+  font-size: 0.9em;
+}
 .toolPanel {
   height: 200px;
   width: 300px;
@@ -47,14 +56,16 @@ margin: 0 0 50px 0;
 }
 
 .wrapLinkProj {
-  color: #FF7300;
+  color: #444;
 }
+
 .wrapLinkProj::after {
   content:  ' \00BB';
-  font-size: 1.3em;
 }
+
 .wrapLinkProj:hover {
-  color: #79C95F;
+  color: #111;
+  text-decoration: underline;
 }
 
 

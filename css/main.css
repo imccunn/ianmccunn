@@ -21,17 +21,18 @@ body {
 }
 
 a {
-  color: #FF7300;
+  color: #222;
   text-decoration: none;
 }
 
 a:hover {
-  color: #FF7300;
+  color: #222;
+  text-decoration: underline;
 }
 
 ::selection {
-  background-color: #249100;
-  /*color: #5B07E3;*/
+  background-color: #081084;
+  color: #fff;
 }
 
 .page-title {
@@ -42,6 +43,10 @@ a:hover {
 .page-title a {
   color: #111;
   display: inline-block;
+}
+
+.page-title a:hover {
+  text-decoration: none;
 }
 
 .page-title a h2 {
@@ -97,17 +102,18 @@ a:hover {
 }
 
 .nav a:hover {
-  color: #249100;
+  color: #333;
+  text-decoration: none;
 }
 
 .nav a:hover:before {
   content: "{ ";
-  color: #249100;
+  color: #777;
 }
 
 .nav a:hover:after {
   content: " }";
-  color: #249100;
+  color: #777;
 }
 
 .nav a:active:before {
@@ -130,7 +136,7 @@ a:hover {
   width: 2px;
   float: left;
   position: relative;
-  background-color: #fff;
+  background-color: #ddd;
   padding: 0;
   margin: 0;
   -webkit-animation: neatMove 8s infinite;
@@ -148,13 +154,13 @@ a:hover {
 
 .selected-nav:before {
   content: "{ ";
-  color: #249100;
+  color: #aaa;
   font-weight: bold;
 }
 
 .selected-nav:after {
   content: " }";
-  color: #249100;
+  color: #aaa;
   font-weight: bold;
 
 }
@@ -214,6 +220,7 @@ p.lead {
   text-indent: 29.5px;
   letter-spacing: 1px;
 }
+
 .index-content h3 {
   
 }
@@ -278,6 +285,11 @@ p.lead {
 
 .workContent a span {
   margin-left: 7px;
+}
+
+.workContent p {
+  font-style: italic;
+  color: #999;
 }
 
 .deployAppLink {
