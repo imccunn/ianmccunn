@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="Web developer and programmer.">
+    <meta name="author" content="Ian D. McCunn">
+
+
+    <link rel="icon"  href="../img/object.ico">
+    <link rel='stylesheet' type='text/css' href='../css/normalize.css'>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/code_general.css">
+    <style type="text/css">
+      canvas {
+        padding: 0;
+        margin: 0;
+      }
+
+      #reset {
+        position: absolute;
+        top: 2em;
+        left: 2em;
+        width: 6em;
+        height: 3em;
+        font-size: 0.9em;
+        
+        color: #87EB34;
+        background-color: #9834EB;
+        border: 1px solid #87EB34;
+      }
+
+      #reset:focus {
+        outline: 0;
+      }
+
+      #reset:hover {
+        color: #34E2EB;
+        background-color: #EB3D34;
+        border: 1px solid #34E2EB;
+        cursor: not-allowed;
+      }
+
+      #cs {
+        position: absolute;
+        left: 130px;
+        top: 25px;
+        color: #ff0000;
+        font-style: italic;
+        
+      }
+    </style>
+    <title>Ian McCunn - Canvas 6</title>
+
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="all">
+      <div class="main-content">
+        <div class="header">
+          <div class="page-title">
+            <a href="../index.html">
+              <h2>Ian D. McCunn</h2>
+              <h4>Software Developer</h4>
+            </a>
+          </div>
+          <div class="nav">
+            <ul>
+              <li><a href="../code.html">Code</a></li>
+              <li><a href="../cv.html">CV</a></li>
+              <li><a href="../projects.html">Projects</a></li>
+              <li><a href="../blog">Blog</a></li>
+              <li><a href="mailto:ianmccunn@gmail.com" class="nav-email"title="Send Email to Ian (mailto)">ian.mccunn@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="hrA1"> 
+            <div class="vec"></div>
+          </div>
+        </div>
+
+        <!-- MAIN, PAGE CONTENT______________________________________________-->
+        <div style="position: relative;">
+          <div style="margin: 10px;">
+            <canvas id="c"></canvas>
+          </div>
+          <button id="reset">Reset</button>
+        </div>  
+
+        <!--END MAIN PAGE CONTENT____________________________________________-->
+
+        <div class="footer">
+
+          <div class="digital-presence">
+            <ul>
+              <li><a href="https://coderbits.com/mcfun" target="_blank" title="Ian's Coderbits Profile"><img src="../img/digPres/CoderbitsFaceCircleBW.png" alt="Coderbits Logo"></a></li>
+              <li><a href="https://github.com/mcfun" target="_blank" title="Ian's Github Profile"><img src="../img/digPres/GitHub-Mark-Light-64px.png" alt="Github Logo"></a></li>
+              <li><a href="http://codepen.io/mcfun/" target="_blank" title="Ian's CodePen Profile"><img src="../img/digPres/CP-Button-white-Large.png" alt="CodePen Logo"></a></li>
+              <li><a href="http://www.linkedin.com/in/ianmccunn" target="_blank" title="Ian's LinkedIn Profile"><img src="../img/digPres/LinkedIn-InBug-2C.png" alt="LinkedIn Logo"></a></li>
+            </ul>
+          </div>
+
+          <div class='copyright'>
+            <p>Ian D. McCunn © 2015</p>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- JS
+    ===============================================-->
+    <!-- <script type='text/javascript' src='js/general.js'></script>-->
+    <script type="text/javascript" src="../js/vendor/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/page-dynamics.js"></script>
+    <script type="text/javascript">
+      // Ian McCunn, @IanMcCunn, ianmccunn.com
+      // 
+      // License MIT
+      //
+
+      // ** Lower these values for performance consideration
+      var numOfRects = 500;
+      var speed = 200;
+
+      // Rectangle Size
+      var h = 5,
+          w = 5;
+
+      var c = document.getElementById('c');
+      var ctx = c.getContext('2d');
+      c.width = 900;
+      c.height = 900;
+
+      function Rect() {
+        this.x = 0;
+        this.y = 0;
+        this.clr;
+      }
+
+      var rects = [];
+      function initRects() {
+        rects = [];
+        for (var i = 0; i < numOfRects; i++) {
+          var t = new Rect();
+          t.x = c.width/2;
+          t.y = c.height/2;
+          var clr = decToHex(rand255());
+          t.clr = '#' + clr + clr + clr;
+          rects.push(t);
+        } 
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, c.width, c.height);
+        for (var i = 0; i < rects.length; i++) {
+          rects[i].x += rand();
+          rects[i].y += rand();
+          rects[i].x = clampX(rects[i].x);
+          rects[i].y = clampY(rects[i].y);
+          drawRect(rects[i].x, rects[i].y, w, h, rects[i].clr);    
+        }
+        window.requestAnimationFrame(render);
+      }
+
+      function decToHex(dec) {
+        return dec.toString(16);
+      }
+
+      function drawRect(x, y, w, h, clr) {
+        var hx = clr.toString(16);
+        ctx.fillStyle = clr;  
+        ctx.fillRect(x, y, w, h);
+      }
+
+      function clampX(v) {
+        return (v > c.width || v < 0) ? c.width/2 : v;
+      }
+      function clampY(v) {
+        return (v > c.height || v < 0) ? c.height/2 : v;
+      }
+
+      function rand() {
+        return Math.random() > (speed * 0.001) ?
+          0 :
+          Math.random() > 0.5 ? 10 : -10;
+      }
+
+      function rand10() {
+        return Math.floor(Math.random() * 20) * 10;
+      }
+
+      function rand255() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+
+      c.addEventListener('mousemove', function(evt) {
+        var mousePos = getMousePos(c, evt);
+        
+      });
+      document.body.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+      });
+      c.addEventListener('click', function(evt) {
+        var mousePos = getMousePos(c, evt);
+        var r = new Rect();
+        r.x = mousePos.x;
+        r.y = mousePos.y; 
+        r.clr = '#' + decToHex(rand255()) + decToHex(rand255()) + decToHex(rand255());
+        rects.push(r);
+        clearSelection();
+      });
+
+      initRects();
+      render();
+
+      // Events from DOM
+
+      document.getElementById('reset').addEventListener('click', function() {
+        initRects();
+      });
+
+    </script>
+
+    <!-- Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55319861-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <img src="img/waVis.png" style="display: none;">
+  </body>
+
+</html>
