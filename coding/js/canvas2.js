@@ -13,7 +13,7 @@
 	var numDots = 2000,
 			dots = [];
 
-	//init dots storage
+	// init dots storage
 	for (var i = 0; i < numDots; i++){
 		dots.push({xx: 0, yy: 0});
 	}
@@ -38,7 +38,7 @@
 		ctx.fill();
 	}
 
-	function DrawPoints(color) {
+	function drawPoints(color) {
 		for (var i = 0; i < numDots; i++){
 			ctx.fillStyle = color;
 			ctx.beginPath();
@@ -64,7 +64,7 @@
 
 	};
 
-	function DeltaPoints(fCount) {
+	function deltaPoints(fCount) {
 
 		var xChange = 0;
 		var dotColor = '';
@@ -179,40 +179,40 @@
 	function frameLoop() {
 	  clear();
 
-	  if (frameCount == 500){
+	  if (frameCount === 500){
 	  	frameCount = 0;
 	  } else {
 	  	frameCount++;
 	  }
 
 	  // **** Flashing Lines ****
-	  if ( frameCount%20 === 0){
+	  if (frameCount % 20 === 0){
 	  	drawLine(0, getRandom(1, height), width, getRandom(5, 30), '#FF17E0');
 	  }
 
-	 	if ( frameCount%15 === 0){
+	 	if (frameCount % 15 === 0){
 	  	drawLine(0, getRandom(1, height), width, getRandom(10, 100), '#000');
 	  }
 	  
 	  drawLine(0, getRandom(1, 300), width, 1, '#fff');
 
-	  if (frameCount % 5 == 0){
+	  if (frameCount % 5 === 0){
 			drawLine(0, getRandom(500, 760), width, 1, '#00FF00');
 	  }
 
-	  if (frameCount % 7 == 0){
+	  if (frameCount % 7 === 0){
 			drawLine(0, getRandom(0, 760), width, 2, '#00FF00');
 	  }
 
 	  if ( frameCount % 23 === 0 ) {
 	  }
 	  
-	  DeltaPoints(frameCount);
+	  deltaPoints(frameCount);
 
 	  requestAnimationFrame(frameLoop);
 	 }
 	 
-	DrawPoints('#03FFDD');
+	drawPoints('#03FFDD');
 	frameLoop();
 
 })();
