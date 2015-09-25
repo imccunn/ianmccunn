@@ -175,7 +175,6 @@
   //
   // @param none
   // @return none
-
   function createNPermutations(numPermutations, setSize){
 
     var allSets = [],
