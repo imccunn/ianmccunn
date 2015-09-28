@@ -9,7 +9,6 @@ var SAMPLE_RATE = Math.floor(640 / blockSize);
 c.width = WIDTH = SAMPLE_RATE * blockSize;
 c.height = HEIGHT = SAMPLE_RATE * blockSize;
 
-
 // ********** Canvas Draw Functions **********
 function fillBackDefault(rc) {
   ctx.beginPath();
@@ -41,7 +40,6 @@ function Block(rc) {
   this.z = 0;
   this.color = 'rgb(' + rc + ', ' + rc + ', ' + rc + ')';
   this.blockType = 0;
-
 }
 
 function BlockGrid() {
@@ -292,7 +290,6 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-
 function loop() {
   fillBackDefault();
   blocks1.init();
@@ -306,7 +303,6 @@ fillBackDefault(0);
 var blocks1 = new BlockGrid();
 blocks1.init();
 //blocks1.fillCoherentNoise();
-
 
 function generate() {
   fillBackDefault();

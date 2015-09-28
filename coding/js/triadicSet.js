@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  
+
   //constants
   var chordMember = {
     root: 0,
@@ -32,6 +32,7 @@
     };
 
   }
+  
   function Chord(cname){
 
     this.cname = cname;
