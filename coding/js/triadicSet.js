@@ -30,9 +30,8 @@
     this.modify = function(modifier){
       this.pitch += pitchModifier[modifier];
     };
-
   }
-  
+
   function Chord(cname){
 
     this.cname = cname;
@@ -48,11 +47,11 @@
       //Format includes slash notation
       var rxResult = chordRex.exec(this.cname);
 
-      if(!chordRex.test(this.cname)){
+      if (!chordRex.test(this.cname)){
 
         return console.log("Incorrect Chord Format to determine set.");
 
-      }else{
+      } else {
 
         for (var i = 2; i < 15; i++){
           switch (rxResult[i]){
@@ -68,12 +67,8 @@
         //Process number following root PC (C9, C7)
 
         return;
-
       }
-
-
     }
-
   }
 
 
@@ -113,7 +108,6 @@
 
   function init(){
     calcTraidSet.addEventListener('click', findSet);
-
   }
 
   function findSet(){
@@ -126,20 +120,17 @@
     console.log(re.test(mainChord));
     var rxResult = re.exec(mainChord);
 
-    if(!re.test(mainChord)){
+    if (!re.test(mainChord)){
 
       document.getElementById('triadSetResult').innerHTML = "<span style=\"color: red;\">Incorrect format.</span>";
 
-    }else{
+    } else {
       console.log("truth reached");
       document.getElementById('triadSetResult').innerHTML = "";
       for (var i = 0; i < rxResult.length; i++){
-
         document.getElementById('triadSetResult').innerHTML += "<p>" + (i+1) + ". " + rxResult[i] + "</p>";
       }
-
     }
-
     return;
   }
 
