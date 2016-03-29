@@ -5,7 +5,7 @@
 //
 // Author: Ian McCunn, @IanMcCunn
 
-(function(){
+(function() {
   'use strict';
 
   // **************
@@ -24,7 +24,7 @@
   // @param none
   // @return none
 
-  function init(){
+  function init() {
     initCalc.addEventListener('click', checkInput);
 
     // fetch input once
@@ -39,7 +39,7 @@
   // @param none
   // @return none
 
-  function checkInput(){
+  function checkInput() {
     console.log("run");
 
     // set the size of the set, optionally create several different random patterns
@@ -64,7 +64,7 @@
     // If the conditional passes we do stuff
 
     //Determine picking style and set Right hand data to use
-    if ( document.getElementById('hybridStyle').checked){
+    if (document.getElementById('hybridStyle').checked){
       rightHandData = ['p', 'm', 'a', 'c'];
       if (document.getElementById('noPinky').checked){
         rightHandData = ['p', 'm', 'a'];
@@ -97,7 +97,7 @@
   //
   // @return newCombo
   //   array of new attacks to be added to the list
-  function findOneCombo(nAttacks){
+  function findOneCombo(nAttacks) {
 
     var newCombo = [],  // placeholder for final series of randomly generated attacks
         nextDigit, // temp placeholder for finger char to be verified as possible next finger
@@ -135,7 +135,7 @@
   //
   // @return nAttackType
   //   an array representing the count of each type used
-  function findStatDistribution(attacksArray){
+  function findStatDistribution(attacksArray) {
 
     var attackCheck,
         nAttackType = [0,0,0,0,0],
@@ -175,7 +175,7 @@
   //
   // @param none
   // @return none
-  function createNPermutations(numPermutations, setSize){
+  function createNPermutations(numPermutations, setSize) {
 
     var allSets = [],
         setForDist = [],
@@ -207,10 +207,11 @@
   //
   // @param none
   // @return none
-  function updateDOM(){
+  function updateDOM() {
 
     var distAttackType = [0,0,0,0,0],
-        output = "<table>";
+        output = "<table>",
+        percent;
 
     //Add the statistical data to the DOM
     for (var i = 4; i >= 0; i--) {

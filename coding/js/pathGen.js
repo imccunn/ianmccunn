@@ -5,7 +5,7 @@ var ctx = c.getContext('2d');
 var blockSize = 4;
 
 var SAMPLE_RATE = Math.floor(640 / blockSize);
-
+var WIDTH, HEIGHT;
 c.width = WIDTH = SAMPLE_RATE * blockSize;
 c.height = HEIGHT = SAMPLE_RATE * blockSize;
 
